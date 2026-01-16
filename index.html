@@ -690,11 +690,6 @@
         flex-wrap: wrap;
       }
 
-      .section {
-        overflow: auto;
-        margin-bottom: 32px;
-      }
-
       .score-set {
         min-width: 36px;
         height: 36px;
@@ -707,39 +702,19 @@
       }
 
       .rules-grid {
-        gap: 8px;
-      }
-
-      header {
-        height: 350px;
-      }
-
-      .content-grid {
-        padding: 16px;
+        grid-template-columns: 1fr;
       }
 
       h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
       }
 
       .section-title {
-        font-size: 1rem;
+        font-size: 1.3rem;
       }
 
       .section {
-        padding: 16px;
-      }
-
-      .top-3 .position-cell {
-        font-size: 1rem;
-      }
-
-      .standings-table tbody td {
-        padding: 16px 8px;
-      }
-
-      .content-grid {
-        display: block;
+        padding: 20px;
       }
     }
 
@@ -1172,10 +1147,6 @@
     @media (max-width: 768px) {
       .player-modal-content {
         max-height: 95vh;
-      }
-
-      button.month-tab:not(.active) {
-        display: none;
       }
 
       .player-modal-header {
@@ -2482,10 +2453,10 @@
             }
 
             // Parse set scores like "(1-4) , (3-4)"
-            const setMatches = match.score.match(/\((\d+)-(\d+)\)/g);
+            const setMatches = match.score.match(/\(\s*(\d+)-(\d+)\s*\)/g);
             if (setMatches) {
               setMatches.forEach((setScore, index) => {
-                const scores = setScore.match(/\((\d+)-(\d+)\)/);
+                const scores = setScore.match(/\(\s*(\d+)-(\d+)\s*\)/);
                 if (scores) {
                   const p1Score = parseInt(scores[1]);
                   const p2Score = parseInt(scores[2]);
@@ -2929,13 +2900,13 @@
 
             if (match.score && match.score !== 'αναβολή') {
               // Parse score to determine winner
-              const setMatches = match.score.match(/\((\d+)-(\d+)\)/g);
+              const setMatches = match.score.match(/\(\s*(\d+)-(\d+)\s*\)/g);
               if (setMatches) {
                 let player1Sets = 0;
                 let player2Sets = 0;
 
                 setMatches.forEach(setScore => {
-                  const scores = setScore.match(/\((\d+)-(\d+)\)/);
+                  const scores = setScore.match(/\(\s*(\d+)-(\d+)\s*\)/);
                   if (scores) {
                     const p1Score = parseInt(scores[1]);
                     const p2Score = parseInt(scores[2]);
