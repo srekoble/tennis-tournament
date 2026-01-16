@@ -1,0 +1,2992 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Tournament 2025-2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Oswald:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-yellow: #D4FF00;
+            --dark-bg: #0A0E1A;
+            --dark-surface: #151B2E;
+            --dark-elevated: #1E2738;
+            --text-primary: #FFFFFF;
+            --text-secondary: #B0B8C9;
+            --border-color: #2A3447;
+            --hover-bg: #1E2738;
+            --white: #ffffff;
+            --success-green: #00D98A;
+            --gold: #FFB800;
+            --atp-blue: #0b4ea2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0;
+            position: relative;
+            background: var(--dark-bg);
+            min-height: 100vh;
+        }
+
+        /* Hero Section - Tennis TV Inspired */
+        header {
+            background: var(--dark-bg);
+            text-align: center;
+            padding: 0;
+            margin-bottom: 0;
+            position: relative;
+            overflow: hidden;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Background image with overlay */
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSI0MDAiIHZpZXdCb3g9IjAgMCAxNDQwIDQwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQxIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzVhN2MzZTtzdG9wLW9wYWNpdHk6MC4yIiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3R5bGU9InN0b3AtY29sb3I6I2FkZGQ1NztzdG9wLW9wYWNpdHk6MC4zIiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNkNGZmMDA7c3RvcC1vcGFjaXR5OjAuMiIgLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxwYXRoIGQ9Ik0wIDIwMCBRIDM2MCAyNTAgNzIwIDIwMCBUMTQ0MCAyMDAiIHN0cm9rZT0idXJsKCNncmFkaWVudDEpIiBzdHJva2Utd2lkdGg9IjYwIiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjMiLz4KICA8cGF0aCBkPSJNMCAyMjAgUSAzNjAgMjcwIDcyMCAyMjAgVDE0NDAgMjIwIiBzdHJva2U9InVybCgjZ3JhZGllbnQxKSIgc3Ryb2tlLXdpZHRoPSI1MCIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC4yNSIvPgogIDxwYXRoIGQ9Ik0wIDI0MCBRIDM2MCAyOTAgNzIwIDI0MCBUMTQ0MCAyNDAiIHN0cm9rZT0idXJsKCNncmFkaWVudDEpIiBzdHJva2Utd2lkdGg9IjQwIiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjIiLz4KICA8cGF0aCBkPSJNMCAxODAgUSAzNjAgMjMwIDcyMCAxODAgVDE0NDAgMTgwIiBzdHJva2U9InVybCgjZ3JhZGllbnQxKSIgc3Ryb2tlLXdpZHRoPSI1MCIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC4yIi8+CiAgPHBhdGggZD0iTTAgMTYwIFEgMzYwIDIxMCA3MjAgMTYwIFQxNDQwIDE2MCIgc3Ryb2tlPSJ1cmwoI2dyYWRpZW50MSkiIHN0cm9rZS13aWR0aD0iNDAiIGZpbGw9Im5vbmUiIG9wYWNpdHk9IjAuMTUiLz4KPC9zdmc+Cg==');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.4;
+            animation: waveFlow 15s ease-in-out infinite;
+        }
+
+        @keyframes waveFlow {
+            0%, 100% { transform: translateX(0) scale(1); }
+            50% { transform: translateX(-20px) scale(1.05); }
+        }
+
+        /* Gradient overlay */
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, rgba(212, 255, 0, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding: 40px;
+        }
+
+        .tournament-badge {
+            display: inline-block;
+            background: rgba(212, 255, 0, 0.1);
+            border: 2px solid var(--primary-yellow);
+            color: var(--primary-yellow);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.9; }
+        }
+
+        h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(3.5rem, 8vw, 6rem);
+            letter-spacing: 4px;
+            color: var(--white);
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            font-weight: 700;
+            position: relative;
+            text-shadow: 0 0 40px rgba(212, 255, 0, 0.3);
+            line-height: 1;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: var(--primary-yellow);
+            box-shadow: 0 0 20px var(--primary-yellow);
+        }
+
+        .subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            letter-spacing: 1px;
+            font-weight: 500;
+            margin-top: 24px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            color: var(--primary-yellow);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .hero-stat-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        /* Month tabs */
+        .month-tabs {
+            display: flex;
+            gap: 0;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 0;
+            padding: 0 20px;
+            /* background: var(--dark-surface); */
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .month-tab {
+            font-family: 'Inter', sans-serif;
+            background: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            color: var(--text-secondary);
+            padding: 18px 30px;
+            font-size: 0.75rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .month-tab:hover {
+            color: var(--primary-yellow);
+            /* background: var(--hover-bg); */
+        }
+
+        .month-tab.active {
+            color: var(--primary-yellow);
+            border-bottom-color: var(--primary-yellow);
+            background: transparent;
+            font-weight: 700;
+        }
+
+        /* Content sections */
+        .month-content {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .month-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 0;
+            padding: 24px;
+            background: var(--dark-bg);
+        }
+
+        @media (max-width: 1100px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Section styling */
+        .section {
+            background: var(--dark-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 28px;
+            transition: all 0.3s ease;
+        }
+
+        .section-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--white);
+            text-transform: uppercase;
+            /* letter-spacing: 1px; */
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--border-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: var(--primary-yellow);
+        }
+
+        /* Standings table */
+        .standings-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .standings-table thead th {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark-elevated);
+            color: var(--text-secondary);
+            padding: 14px 16px;
+            text-align: left;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.8rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .standings-table thead th:first-child {
+            text-align: center;
+            width: 60px;
+        }
+
+        .standings-table thead th:nth-child(3),
+        .standings-table thead th:nth-child(4) {
+            text-align: center;
+            width: 100px;
+        }
+
+        .standings-table tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: background-color 0.2s ease;
+        }
+
+        .standings-table tbody tr:hover {
+            background: var(--dark-elevated);
+        }
+
+        .standings-table tbody tr.top-3 {
+            background: rgba(255, 184, 0, 0.05);
+        }
+
+        .standings-table tbody tr.top-3:hover {
+            background: rgba(255, 184, 0, 0.1);
+        }
+
+        .standings-table tbody td {
+            padding: 16px;
+            font-size: 0.95rem;
+        }
+
+        .position-cell {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            width: 60px;
+            text-align: center;
+        }
+
+        .top-3 .position-cell {
+            color: var(--gold);
+            font-size: 1.5rem;
+        }
+
+        .name-cell {
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 0.3px;
+            color: var(--text-primary);
+        }
+
+        .player-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .player-link:hover {
+            color: var(--primary-yellow);
+            text-decoration: underline;
+        }
+
+        .stats-cell {
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .points-cell {
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-yellow);
+        }
+
+        /* Match schedule */
+        .match-group {
+            margin-bottom: 28px;
+        }
+
+        .match-date {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--primary-yellow);
+            margin-bottom: 16px;
+            padding: 12px 20px;
+            background: var(--dark-elevated);
+            border-left: 4px solid var(--primary-yellow);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-radius: 4px;
+        }
+
+        .match-card {
+            background: var(--dark-elevated);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 0;
+            margin-bottom: 12px;
+            transition: all 0.2s ease;
+            overflow: hidden;
+        }
+
+        .match-card:hover {
+            border-color: var(--primary-yellow);
+            box-shadow: 0 4px 16px rgba(212, 255, 0, 0.1);
+        }
+
+        .match-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .match-time {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .match-status {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            color: var(--success-green);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: rgba(0, 217, 138, 0.1);
+            padding: 5px 12px;
+            border-radius: 4px;
+        }
+
+        .match-status.pending {
+            color: var(--text-secondary);
+            background: transparent;
+            border: 1px solid var(--border-color);
+        }
+
+        .match-status.postponed {
+            color: #FFA500;
+            background: rgba(255, 165, 0, 0.1);
+            border: 1px solid rgba(255, 165, 0, 0.3);
+        }
+
+        .match-body {
+            padding: 20px;
+        }
+
+        .match-players-vertical {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .match-player-row {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 20px;
+            padding: 14px 18px;
+            border-radius: 8px;
+            transition: background 0.2s ease;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .match-player-row:hover {
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .match-player-row.winner {
+            background: rgba(0, 217, 138, 0.1);
+            /* border-left: 3px solid var(--success-green); */
+        }
+
+        .player-name-score {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: 0.2px;
+        }
+
+        .player-name-score.winner {
+            font-weight: 700;
+            color: var(--success-green);
+        }
+
+        .score-row {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .score-set {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            min-width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--dark-surface);
+            border-radius: 6px;
+            border: 2px solid var(--border-color);
+        }
+
+        .score-set.winner {
+            background: var(--atp-blue);
+            color: var(--white);
+            border-color: var(--atp-blue);
+        }
+
+        .score-set.tiebreak {
+            min-width: 52px;
+            font-size: 0.95rem;
+            background: var(--dark-surface);
+            border-style: dashed;
+        }
+
+        .score-set.tiebreak.winner {
+            background: var(--atp-blue);
+            color: var(--white);
+            border-color: var(--atp-blue);
+            border-style: solid;
+        }
+
+        .score-set.pending-score {
+            background: transparent;
+            border-style: dashed;
+            color: var(--text-secondary);
+            opacity: 0.5;
+        }
+
+        .match-empty-score {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .match-postponed {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: #FFA500;
+            font-weight: 600;
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 165, 0, 0.05);
+            border-radius: 6px;
+        }
+
+        /* Tournament info box */
+        .info-box {
+            /* background: var(--dark-surface); */
+            /* border: 1px solid var(--border-color); */
+            padding: 32px;
+            margin: 30px auto;
+            max-width: 800px;
+            border-radius: 12px;
+        }
+
+        .info-box h3 {
+            font-family: 'Inter', sans-serif;
+            color: var(--white);
+            font-size: 1.35rem;
+            margin-bottom: 28px;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        .rules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 20px;
+        }
+
+        .rule-card {
+            text-align: center;
+            padding: 16px;
+            /* background: var(--dark-elevated); */
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .rule-card:hover {
+            border-color: var(--primary-yellow);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(212, 255, 0, 0.15);
+        }
+
+        .rule-icon {
+            font-size: 2rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .rule-title {
+            font-family: 'Inter', sans-serif;
+            color: var(--primary-yellow);
+            font-size: 0.55rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .rule-description {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            line-height: 1.5;
+            font-weight: 300;
+        }
+
+        .info-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .info-box li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.6;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+        }
+
+        .info-box li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--atp-blue);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .info-box strong {
+            color: var(--atp-dark-blue);
+            font-weight: 700;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .score-row {
+                flex-wrap: wrap;
+            }
+
+            .score-set {
+                min-width: 36px;
+                height: 36px;
+                font-size: 1rem;
+            }
+
+            .match-player-row {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .rules-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 1.3rem;
+            }
+
+            .section {
+                padding: 20px;
+            }
+        }
+
+        /* Player Detail Modal */
+        .player-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow-y: auto;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .player-modal.active {
+            display: flex;
+        }
+
+        .player-modal-content {
+            background: var(--dark-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            max-width: 900px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .player-modal-header {
+            background: var(--dark-elevated);
+            padding: 32px;
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+            border-radius: 16px 16px 0 0;
+        }
+
+        .player-modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: transparent;
+            border: 2px solid var(--border-color);
+            color: var(--text-secondary);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .player-modal-close:hover {
+            border-color: var(--primary-yellow);
+            color: var(--primary-yellow);
+            transform: rotate(90deg);
+        }
+
+        .player-name-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+        }
+
+        .player-rank {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            color: var(--primary-yellow);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .player-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .player-stat-card {
+            background: var(--dark-surface);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .player-stat-value {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            color: var(--primary-yellow);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .player-stat-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+        }
+
+        .player-modal-body {
+            padding: 32px;
+        }
+
+        .player-section {
+            margin-bottom: 32px;
+        }
+
+        .player-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .player-section-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-color);
+            position: relative;
+        }
+
+        .player-section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--primary-yellow);
+        }
+
+        /* Performance Charts */
+        .performance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .chart-card {
+            background: var(--dark-elevated);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .chart-card-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+        }
+
+        .progress-bar-container {
+            background: rgba(255, 255, 255, 0.05);
+            height: 32px;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 8px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--success-green), #00ffaa);
+            border-radius: 8px;
+            transition: width 0.6s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--white);
+        }
+
+        .progress-bar.loss-bar {
+            background: linear-gradient(90deg, #ff4444, #ff6b6b);
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .stat-value {
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--white);
+        }
+
+        /* Recent Form */
+        .form-streak {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 12px;
+        }
+
+        .form-indicator {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border: 2px solid;
+        }
+
+        .form-indicator.win {
+            background: rgba(0, 217, 138, 0.15);
+            border-color: var(--success-green);
+            color: var(--success-green);
+        }
+
+        .form-indicator.loss {
+            background: rgba(255, 68, 68, 0.15);
+            border-color: #ff4444;
+            color: #ff4444;
+        }
+
+        /* Monthly performance bars */
+        .month-performance {
+            margin-bottom: 16px;
+        }
+
+        .month-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+        }
+
+        .month-name {
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .month-points {
+            color: var(--primary-yellow);
+            font-weight: 700;
+        }
+
+        .month-bar {
+            height: 24px;
+            background: linear-gradient(90deg, var(--primary-yellow), #FFD700);
+            border-radius: 6px;
+            transition: width 0.6s ease;
+        }
+
+        /* Best opponent badge */
+        .opponent-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+
+        .opponent-badge.dominant {
+            background: rgba(0, 217, 138, 0.15);
+            color: var(--success-green);
+        }
+
+        .opponent-badge.struggling {
+            background: rgba(255, 68, 68, 0.15);
+            color: #ff4444;
+        }
+
+        /* Empty state for stats */
+        .stats-empty {
+            text-align: center;
+            padding: 32px;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .match-history-item {
+            background: var(--dark-elevated);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin-bottom: 12px;
+            display: grid;
+            grid-template-columns: 80px 1fr auto auto;
+            gap: 16px;
+            align-items: center;
+            transition: all 0.2s ease;
+        }
+
+        .match-history-item:hover {
+            border-color: var(--primary-yellow);
+            transform: translateX(4px);
+        }
+
+        .match-history-date {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .match-history-opponent {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .match-history-opponent span {
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.85rem;
+        }
+
+        .match-history-result {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .match-history-result.win {
+            background: rgba(0, 217, 138, 0.15);
+            color: var(--success-green);
+        }
+
+        .match-history-result.loss {
+            background: rgba(255, 68, 68, 0.15);
+            color: #ff4444;
+        }
+
+        .match-history-score {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+            min-width: 100px;
+            text-align: right;
+        }
+
+        .h2h-grid {
+            display: grid;
+            gap: 12px;
+        }
+
+        .h2h-item {
+            background: var(--dark-elevated);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 16px 20px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .h2h-opponent {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .h2h-record {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .h2h-record .wins {
+            color: var(--success-green);
+            font-weight: 700;
+        }
+
+        .h2h-record .losses {
+            color: #ff4444;
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            .player-modal-content {
+                max-height: 95vh;
+            }
+
+            .player-modal-header {
+                padding: 24px;
+            }
+
+            .player-name-title {
+                font-size: 2rem;
+            }
+
+            .player-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .match-history-item {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .match-history-score {
+                text-align: left;
+            }
+        }
+
+        /* Loading animation */
+        .loading {
+            text-align: center;
+            padding: 60px;
+            font-size: 1.5rem;
+            color: var(--atp-blue);
+        }
+
+        /* Empty state */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="hero-content">
+                <div class="tournament-badge">⚡ Live Tournament</div>
+                <h1>Tennis Tournament</h1>
+                <div class="subtitle">Πρωτάθλημα 2025-2026</div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">23</div>
+                        <div class="hero-stat-label">Αθλητές</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">73</div>
+                        <div class="hero-stat-label">Αγώνες</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">4</div>
+                        <div class="hero-stat-label">Μήνες</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="info-box">
+            <h3>Κανόνες Τουρνουά</h3>
+            <div class="rules-grid">
+                <div class="rule-card">
+                    <span class="rule-icon">🏆</span>
+                    <div class="rule-title">Βαθμολογία</div>
+                    <div class="rule-description">Νίκη = 2 βαθμοί<br>Ήττα = 1 βαθμός</div>
+                </div>
+                <div class="rule-card">
+                    <span class="rule-icon">🔄</span>
+                    <div class="rule-title">Μορφή</div>
+                    <div class="rule-description">Όλοι παίζουν με όλους (round robin)</div>
+                </div>
+                <div class="rule-card">
+                    <span class="rule-icon">📅</span>
+                    <div class="rule-title">Αγώνες</div>
+                    <div class="rule-description">Κάθε Σάββατο<br>2 σετ × 4 games</div>
+                </div>
+                <div class="rule-card">
+                    <span class="rule-icon">⚡</span>
+                    <div class="rule-title">Tie-break</div>
+                    <div class="rule-description">Σε ισοπαλία 1-1<br>Tie-break στο 7</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="month-tabs" id="monthTabs"></div>
+        
+        <div id="content"></div>
+
+        <!-- Player Detail Modal -->
+        <div class="player-modal" id="playerModal">
+            <div class="player-modal-content">
+                <div class="player-modal-header">
+                    <button class="player-modal-close" onclick="closePlayerModal()">×</button>
+                    <div class="player-name-title" id="modalPlayerName"></div>
+                    <div class="player-rank" id="modalPlayerRank"></div>
+                    <div class="player-stats-grid" id="modalPlayerStats"></div>
+                </div>
+                <div class="player-modal-body">
+                    <div class="player-section">
+                        <h3 class="player-section-title">📈 Απόδοση</h3>
+                        <div id="modalPerformanceCharts"></div>
+                    </div>
+                    <div class="player-section">
+                        <h3 class="player-section-title">📅 Μηνιαία Απόδοση</h3>
+                        <div id="modalMonthlyPerformance"></div>
+                    </div>
+                    <div class="player-section">
+                        <h3 class="player-section-title">📊 Ιστορικό Αγώνων</h3>
+                        <div id="modalMatchHistory"></div>
+                    </div>
+                    <div class="player-section">
+                        <h3 class="player-section-title">🎯 Head-to-Head</h3>
+                        <div id="modalHeadToHead"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const tournamentData = {
+  "ΟΚΤΩΒΡΗΣ": {
+    "matches": [
+      {
+        "date": "2025-10-04",
+        "time": "11:00 - 12:00",
+        "player1": "ΣΙΔΕΡΗΣ Σ.",
+        "player2": "ΠΑΝΤΑΖΗΣ",
+        "score": "(1-4) , (3-4)"
+      },
+      {
+        "date": "2025-10-04",
+        "time": "12:00 - 13:00",
+        "player1": "ΛΟΥΡΗ",
+        "player2": "ΠΑΠΑΡΒΑΝΙΤΗΣ",
+        "score": "(4-2) , (4-2)"
+      },
+      {
+        "date": "2025-10-04",
+        "time": "13:00 - 14:00",
+        "player1": "ΒΑΣΙΛΟΠΟΥΛΟΣ",
+        "player2": "ΤΑΞΙΝΤΑΡΙΔΗΣ",
+        "score": "(1-4) , (1-4)"
+      },
+      {
+        "date": "2025-10-04",
+        "time": "14:00 - 15:00",
+        "player1": "ΛΥΜΠΕΡΤΑΣ",
+        "player2": "ΑΝΑΓΝΩΣΤΕΛΛΗΣ",
+        "score": "(0-4) , (0-4)"
+      },
+      {
+        "date": "2025-10-11",
+        "time": "11:00 - 12:00",
+        "player1": "ΤΖΑΒΑΡΑΣ",
+        "player2": "ΤΣΟΥΚΑΛΑΣ",
+        "score": "(3-4) , (2-4)"
+      },
+      {
+        "date": "2025-10-11",
+        "time": "12:00 - 13:00",
+        "player1": "ΚΟΥΜΠΗΣ",
+        "player2": "ΛΟΥΚΑΡΕΛΛΗΣ",
+        "score": "(4-3) , (3-4) TB 7-3"
+      },
+      {
+        "date": "2025-10-11",
+        "time": "13:00 - 14:00",
+        "player1": "ΣΕΦΕΡΗΣ",
+        "player2": "ΑΙΒΑΖΟΓΛΟΥ",
+        "score": "(0-4) , (0-4)"
+      },
+      {
+        "date": "2025-10-11",
+        "time": "14:00 - 15:00",
+        "player1": "ΛΙΑΚΟΠΟΥΛΟΣ",
+        "player2": "ΞΑΓΑΣ",
+        "score": "(4-1) , (3-4) TB 9-8"
+      },
+      {
+        "date": "2025-10-18",
+        "time": "11:00 - 12:00",
+        "player1": "ΑΘΑΝΑΣΙΑΔΗΣ",
+        "player2": "ΤΣΟΥΚΑΛΑΣ",
+        "score": "(2-4) , (4-3) ΤΒ 2-7"
+      },
+      {
+        "date": "2025-10-18",
+        "time": "12:00 - 13:00",
+        "player1": "ΣΙΔΕΡΗΣ Β.",
+        "player2": "ΣΚΟΥΡΑΣ",
+        "score": "(0-4) , ( 1-4)"
+      },
+      {
+        "date": "2025-10-18",
+        "time": "13:00 - 14:00",
+        "player1": "AIBAZOΓΛΟΥ",
+        "player2": "ΖΑΝΗΣ",
+        "score": "(4-1) , ( 4-2)"
+      },
+      {
+        "date": "2025-10-18",
+        "time": "14:00 - 15:00",
+        "player1": "ΑΝΑΓΝΩΣΤΕΛΛΗΣ",
+        "player2": "ΜΠΑΣΤΑΣ",
+        "score": "(0-4) , ( 1-4)"
+      },
+      {
+        "date": "2025-10-25",
+        "time": "11:00 - 12:00",
+        "player1": "ΤΖΑΒΑΡΑΣ",
+        "player2": "ΗRISTOV",
+        "score": "(0-4) , (2-4)"
+      },
+      {
+        "date": "2025-10-25",
+        "time": "12:00 - 13:00",
+        "player1": "ΜΑΓΙΟΠΟΥΛΟΣ",
+        "player2": "ΜΥΛΩΝΑΣ",
+        "score": "(4-0) , (3-4) , (4-1)"
+      },
+      {
+        "date": "2025-10-25",
+        "time": "13:00 - 14:00",
+        "player1": "ΖΑΝΗΣ",
+        "player2": "ΓΕΡΑΣΙΜΟΠΟΥΛΟΣ",
+        "score": "(4-0) , ( 4-0)"
+      },
+      {
+        "date": "2025-10-25",
+        "time": "14:00 - 15:00",
+        "player1": "ΛΟΥΡΗ",
+        "player2": "ΜΠΑΣΤΑΣ",
+        "score": "(3-4) , (3-4)"
+      }
+    ],
+    "standings": [
+      {
+        "position": 1,
+        "name": "ΑΙΒΑΖΟΓΛΟΥ",
+        "matches_played": 2,
+        "points": 4
+      },
+      {
+        "position": 2,
+        "name": "ΜΠΑΣΤΑΣ",
+        "matches_played": 2,
+        "points": 4
+      },
+      {
+        "position": 3,
+        "name": "ΤΣΟΥΚΑΛΑΣ",
+        "matches_played": 2,
+        "points": 3
+      },
+      {
+        "position": 4,
+        "name": "ΑΝΑΓΝΩΣΤΕΛΛΗΣ",
+        "matches_played": 2,
+        "points": 3
+      },
+      {
+        "position": 5,
+        "name": "ΛΟΥΡΗ",
+        "matches_played": 2,
+        "points": 3
+      },
+      {
+        "position": 7,
+        "name": "HRISTOV",
+        "matches_played": 1,
+        "points": 2
+      },
+      {
+        "position": 8,
+        "name": "ΠΑΝΤΑΖΗΣ",
+        "matches_played": 1,
+        "points": 2
+      },
+      {
+        "position": 9,
+        "name": "ΤΑΞΙΝΤΑΡΙΔΗΣ",
+        "matches_played": 1,
+        "points": 2
+      },
+      {
+        "position": 10,
+        "name": "ΚΟΥΜΠΗΣ",
+        "matches_played": 1,
+        "points": 2
+      },
+      {
+        "position": 11,
+        "name": "ΛΙΑΚΟΠΟΥΛΟΣ",
+        "matches_played": 1,
+        "points": 2
+      },
+      {
+        "position": 13,
+        "name": "ΣΚΟΥΡΑΣ",
+        "matches_played": 1,
+        "points": 2
+      },
+      {
+        "position": 14,
+        "name": "ΤΖΑΒΑΡΑΣ",
+        "matches_played": 2,
+        "points": 2
+      },
+      {
+        "position": 15,
+        "name": "MAΓΙΟΠΟΥΛΟΣ",
+        "matches_played": 1,
+        "points": 2
+      },
+      {
+        "position": 16,
+        "name": "ΣΙΔΕΡΗΣ Σ.",
+        "matches_played": 1,
+        "points": 1
+      },
+      {
+        "position": 17,
+        "name": "ΠΑΠΑΡΒΑΝΙΤΗΣ",
+        "matches_played": 1,
+        "points": 1
+      },
+      {
+        "position": 19,
+        "name": "ΛΥΜΠΕΡΤΑΣ",
+        "matches_played": 1,
+        "points": 1
+      },
+      {
+        "position": 20,
+        "name": "ΛΟΥΚΑΡΕΛΛΗΣ",
+        "matches_played": 1,
+        "points": 1
+      },
+      {
+        "position": 21,
+        "name": "ΣΕΦΕΡΗΣ",
+        "matches_played": 1,
+        "points": 1
+      },
+      {
+        "position": 22,
+        "name": "ΞΑΓΑΣ",
+        "matches_played": 1,
+        "points": 1
+      },
+      {
+        "position": 23,
+        "name": "ΣΙΔΕΡΗΣ Β.",
+        "matches_played": 1,
+        "points": 1
+      },
+      {
+        "position": 24,
+        "name": "ΜΥΛΩΝΑΣ",
+        "matches_played": 1,
+        "points": 1
+      },
+      {
+        "position": 25,
+        "name": "ΓΕΡΑΣΙΜΟΠΟΥΛΟΣ",
+        "matches_played": 1,
+        "points": 1
+      },
+      {
+        "position": 26,
+        "name": "ΤΖΩΡΤΖΗΣ",
+        "matches_played": 0,
+        "points": 0
+      }
+    ]
+  },
+  "ΝΟΕΜΒΡΗΣ": {
+    "matches": [
+      {
+        "date": "2025-11-01",
+        "time": "11:00 - 12:00",
+        "player1": "ΜΥΛΩΝΑΣ",
+        "player2": "ΤΣΟΥΚΑΛΑΣ",
+        "score": "(0-4) , (0-4)"
+      },
+      {
+        "date": "2025-11-01",
+        "time": "12:00 - 13:00",
+        "player1": "ΣΚΟΥΡΑΣ",
+        "player2": "ΛΥΜΠΕΡΤΑΣ",
+        "score": "(4-1) , (4-0)"
+      },
+      {
+        "date": "2025-11-01",
+        "time": "13:00 - 14:00",
+        "player1": "ΑΙΒΑΖΟΓΛΟΥ",
+        "player2": "ΜΑΓΙΟΠΟΥΛΟΣ",
+        "score": "(4-3) , (4-2)"
+      },
+      {
+        "date": "2025-11-01",
+        "time": "14:00 - 15:00",
+        "player1": "HRISTOV",
+        "player2": "ΑΡΓΥΡΟΠΟΥΛΟΣ",
+        "score": "(4-0) , (4-0)"
+      },
+      {
+        "date": "2025-11-08",
+        "time": "11:00 - 12:00",
+        "player1": "ΛΟΥΚΑΡΕΛΛΗΣ",
+        "player2": "ΤΖΩΡΤΖΗΣ",
+        "score": "(3-4) , (4-1)tie 1-7"
+      },
+      {
+        "date": "2025-11-08",
+        "time": "12:00 - 13:00",
+        "player1": "ΣΕΦΕΡΗΣ",
+        "player2": "ΓΕΡΑΣΙΜΟΠΟΥΛΟΣ",
+        "score": "(4-0) , (2-4)tie 7-5"
+      },
+      {
+        "date": "2025-11-08",
+        "time": "13:00 - 14:00",
+        "player1": "ΒΑΣΙΛΟΠΟΥΛΟΣ",
+        "player2": "ΞΑΓΑΣ",
+        "score": "(4-3) , (3-4)tie 7-2"
+      },
+      {
+        "date": "2025-11-08",
+        "time": "14:00 - 15:00",
+        "player1": "ΣΙΔΕΡΗΣ Σ.",
+        "player2": "ΤΑΞΙΝΤΑΡΙΔΗΣ",
+        "score": "αναβολή"
+      },
+      {
+        "date": "2025-11-15",
+        "time": "11:00 - 12:00",
+        "player1": "ΑΘΑΝΑΣΙΑΔΗΣ",
+        "player2": "ΖΑΝΗΣ",
+        "score": "(0-4) , (1-4)"
+      },
+      {
+        "date": "2025-11-15",
+        "time": "12:00 - 13:00",
+        "player1": "ΜΑΓΙΟΠΟΥΛΟΣ",
+        "player2": "ΛΟΥΚΑΡΕΛΛΗΣ",
+        "score": "(4-2) , (3-4)tie 7-5"
+      },
+      {
+        "date": "2025-11-15",
+        "time": "13:00 - 14:00",
+        "player1": "ΜΥΛΩΝΑΣ",
+        "player2": "ΣΙΔΕΡΗΣ Σ.",
+        "score": "(3-4) , (0-4)"
+      },
+      {
+        "date": "2025-11-15",
+        "time": "14:00 - 15:00",
+        "player1": "ΚΟΥΜΠΗΣ",
+        "player2": "ΤΑΞΙΝΤΑΡΙΔΗΣ",
+        "score": "(4-1) , (4-3)"
+      },
+      {
+        "date": "2025-11-22",
+        "time": "12:00 - 13:00",
+        "player1": "ΛΟΥΡΗ",
+        "player2": "HRISTOV",
+        "score": "(4-3) , (0-4)tie 8-6"
+      },
+      {
+        "date": "2025-11-22",
+        "time": "13:00 - 14:00",
+        "player1": "ΣΕΦΕΡΗΣ",
+        "player2": "ΒΑΣΙΛΟΠΟΥΛΟΣ",
+        "score": "(3-4) , (3-4)"
+      },
+      {
+        "date": "2025-11-22",
+        "time": "14:00 - 15:00",
+        "player1": "ΞΑΓΑΣ",
+        "player2": "ΑΝΑΓΝΩΣΤΕΛΛΗΣ",
+        "score": "(0-4) , (4-0)tie 5-7"
+      },
+      {
+        "date": "2025-11-22",
+        "time": "15:00 - 16:00",
+        "player1": "ΣΙΔΕΡΗΣ Β.",
+        "player2": "ΤΖΑΒΑΡΑΣ",
+        "score": "(2-4) , (3-4)"
+      },
+      {
+        "date": "2025-11-29",
+        "time": "11:00 - 12:00",
+        "player1": "ΓΕΡΑΣΙΜΟΠΟΥΛΟΣ",
+        "player2": "ΣΚΟΥΡΑΣ",
+        "score": "(1-4) , (1-4)"
+      },
+      {
+        "date": "2025-11-29",
+        "time": "12:00 - 13:00",
+        "player1": "ΜΥΛΩΝΑΣ",
+        "player2": "ΑΘΑΝΑΣΙΑΔΗΣ",
+        "score": "(1-4) , (0-4)"
+      },
+      {
+        "date": "2025-11-29",
+        "time": "13:00 - 14:00",
+        "player1": "ΚΟΥΜΠΗΣ",
+        "player2": "ΣΙΔΕΡΗΣ Β.",
+        "score": "(2-4) , (1-4)"
+      },
+      {
+        "date": "2025-11-29",
+        "time": "14:00 - 15:00",
+        "player1": "ΜΠΑΣΤΑΣ",
+        "player2": "ΤΖΩΡΤΖΗΣ",
+        "score": "(3-4) , (4-2)tie7-1"
+      },
+      {
+        "date": "2025-11-29",
+        "time": "15:00 - 16:00",
+        "player1": "ΣΙΔΕΡΗΣ Σ.",
+        "player2": "ΤΑΞΙΝΤΑΡΙΔΗΣ",
+        "score": "(4-3) , (2-4)tie6-8"
+      }
+    ],
+    "standings": [
+      {
+        "position": 1,
+        "name": "ΑΙΒΑΖΟΓΛΟΥ",
+        "matches_played": 3,
+        "points": 6
+      },
+      {
+        "position": 2,
+        "name": "ΜΠΑΣΤΑΣ",
+        "matches_played": 3,
+        "points": 6
+      },
+      {
+        "position": 3,
+        "name": "ΣΚΟΥΡΑΣ",
+        "matches_played": 3,
+        "points": 6
+      },
+      {
+        "position": 4,
+        "name": "ΤΣΟΥΚΑΛΑΣ",
+        "matches_played": 3,
+        "points": 5
+      },
+      {
+        "position": 5,
+        "name": "ΖΑΝΗΣ",
+        "matches_played": 3,
+        "points": 5
+      },
+      {
+        "position": 7,
+        "name": "HRISTOV",
+        "matches_played": 3,
+        "points": 5
+      },
+      {
+        "position": 8,
+        "name": "ΑΝΑΓΝΩΣΤΕΛΛΗΣ",
+        "matches_played": 3,
+        "points": 5
+      },
+      {
+        "position": 9,
+        "name": "ΛΟΥΡΗ",
+        "matches_played": 3,
+        "points": 5
+      },
+      {
+        "position": 10,
+        "name": "ΒΑΣΙΛΟΠΟΥΛΟΣ",
+        "matches_played": 3,
+        "points": 5
+      },
+      {
+        "position": 11,
+        "name": "ΚΟΥΜΠΗΣ",
+        "matches_played": 3,
+        "points": 5
+      },
+      {
+        "position": 13,
+        "name": "ΑΘΑΝΑΣΙΑΔΗΣ",
+        "matches_played": 3,
+        "points": 5
+      },
+      {
+        "position": 14,
+        "name": "ΣΕΦΕΡΗΣ",
+        "matches_played": 3,
+        "points": 4
+      },
+      {
+        "position": 15,
+        "name": "ΤΖΑΒΑΡΑΣ",
+        "matches_played": 3,
+        "points": 4
+      },
+      {
+        "position": 16,
+        "name": "ΜΥΛΩΝΑΣ",
+        "matches_played": 4,
+        "points": 4
+      },
+      {
+        "position": 17,
+        "name": "ΣΙΔΕΡΗΣ Σ.",
+        "matches_played": 3,
+        "points": 4
+      },
+      {
+        "position": 19,
+        "name": "ΛΟΥΚΑΡΕΛΛΗΣ",
+        "matches_played": 3,
+        "points": 3
+      },
+      {
+        "position": 20,
+        "name": "ΞΑΓΑΣ",
+        "matches_played": 3,
+        "points": 3
+      },
+      {
+        "position": 21,
+        "name": "ΓΕΡΑΣΙΜΟΠΟΥΛΟΣ",
+        "matches_played": 3,
+        "points": 3
+      },
+      {
+        "position": 22,
+        "name": "ΤΖΩΡΤΖΗΣ",
+        "matches_played": 2,
+        "points": 3
+      },
+      {
+        "position": 23,
+        "name": "ΛΥΜΠΕΡΤΑΣ",
+        "matches_played": 2,
+        "points": 2
+      },
+      {
+        "position": 25,
+        "name": "ΛΙΑΚΟΠΟΥΛΟΣ",
+        "matches_played": 1,
+        "points": 2
+      },
+      {
+        "position": 26,
+        "name": "ΠΑΠΑΡΒΑΝΙΤΗΣ",
+        "matches_played": 1,
+        "points": 1
+      },
+      {
+        "position": 27,
+        "name": "ΑΡΓΥΡΟΠΟΥΛΟΣ",
+        "matches_played": 1,
+        "points": 1
+      }
+    ]
+  },
+  "ΔΕΚΕΜΒΡΗΣ": {
+    "matches": [
+      {
+        "date": "2025-12-06",
+        "time": "12:00 - 13:00",
+        "player1": "ΖΑΝΗΣ",
+        "player2": "ΤΣΟΥΚΑΛΑΣ",
+        "score": "(4-0) , (4-1)"
+      },
+      {
+        "date": "2025-12-06",
+        "time": "13:00 - 14:00",
+        "player1": "ΤΑΞΙΝΤΑΡΙΔΗΣ",
+        "player2": "ΤΣΟΥΚΑΛΑΣ",
+        "score": "(0-4) , (2-4)"
+      },
+      {
+        "date": "2025-12-06",
+        "time": "14:00 - 15:00",
+        "player1": "ΑΘΑΝΑΣΙΑΔΗΣ",
+        "player2": "ΤΖΩΡΤΖΗΣ",
+        "score": "(3-4) , (4-2)tie 1-7"
+      },
+      {
+        "date": "2025-12-06",
+        "time": "15:00 - 16:00",
+        "player1": "HRISTOV",
+        "player2": "ΑΙΒΑΖΟΓΛΟΥ",
+        "score": "(3-4) , (4-2)tie 2-7"
+      },
+      {
+        "date": "2025-12-13",
+        "time": "11:00 - 12:00",
+        "player1": "ΣΚΟΥΡΑΣ",
+        "player2": "ΚΟΥΜΠΗΣ",
+        "score": "(4-1) , (4-2)"
+      },
+      {
+        "date": "2025-12-13",
+        "time": "12:00 - 13:00",
+        "player1": "ΑΘΑΝΑΣΙΑΔΗΣ",
+        "player2": "ΤΖΑΒΑΡΑΣ",
+        "score": "(0-4) , (0-4)"
+      },
+      {
+        "date": "2025-12-13",
+        "time": "13:00 - 14:00",
+        "player1": "ΒΑΣΙΛΟΠΟΥΛΟΣ",
+        "player2": "ΣΙΔΕΡΗΣ Β.",
+        "score": "(4-3) , (2-4)tie 7-4"
+      },
+      {
+        "date": "2025-12-13",
+        "time": "14:00 - 15:00",
+        "player1": "ΖΑΝΗΣ",
+        "player2": "ΜΠΑΣΤΑΣ",
+        "score": "(4-0) , (4-0)"
+      },
+      {
+        "date": "2025-12-20",
+        "time": "12:00 - 13:00",
+        "player1": "ΜΑΓΙΟΠΟΥΛΟΣ",
+        "player2": "ΑΝΑΓΝΩΣΤΕΛΛΗΣ",
+        "score": "(3-4) , (4-3)tie 4-7"
+      },
+      {
+        "date": "2025-12-20",
+        "time": "13:00 - 14:00",
+        "player1": "ΛΟΥΚΑΡΕΛΛΗΣ",
+        "player2": "ΛΥΜΠΕΡΤΑΣ",
+        "score": "(1-4) , (4-3)tie 7-3"
+      },
+      {
+        "date": "2025-12-20",
+        "time": "14:00 - 15:00",
+        "player1": "ΤΖΑΒΑΡΑΣ",
+        "player2": "ΤΖΩΡΤΖΗΣ",
+        "score": "(4-1) , (4-0)"
+      },
+      {
+        "date": "2025-12-20",
+        "time": "15:00 - 16:00",
+        "player1": "ΜΠΑΣΤΑΣ",
+        "player2": "ΑΙΒΑΖΟΓΛΟΥ",
+        "score": "(1-4) , (0-4)"
+      },
+      {
+        "date": "2025-12-27",
+        "time": "12:00 - 13:00",
+        "player1": "ΞΑΓΑΣ",
+        "player2": "ΣΚΟΥΡΑΣ",
+        "score": "(2-4) , (1-4)"
+      },
+      {
+        "date": "2025-12-27",
+        "time": "13:00 - 14:00",
+        "player1": "ΜΑΓΙΟΠΟΥΛΟΣ",
+        "player2": "HRISTOV",
+        "score": "(0-4) , (1-4)"
+      },
+      {
+        "date": "2025-12-27",
+        "time": "14:00 - 15:00",
+        "player1": "ΛΥΜΠΕΡΤΑΣ",
+        "player2": "ΣΙΔΕΡΗΣ Β.",
+        "score": "(2-4) , (4-2)tie 7-4"
+      },
+      {
+        "date": "2025-12-27",
+        "time": "15:00 - 16:00",
+        "player1": "ΓΕΡΑΣΙΜΟΠΟΥΛΟΣ",
+        "player2": "ΛΟΥΚΑΡΕΛΛΗΣ",
+        "score": "(1-4) , (1-4)"
+      }
+    ],
+    "standings": [
+      {
+        "position": 1,
+        "name": "ΑΙΒΑΖΟΓΛΟΥ",
+        "matches_played": 5,
+        "points": 10
+      },
+      {
+        "position": 2,
+        "name": "ΣΚΟΥΡΑΣ",
+        "matches_played": 5,
+        "points": 10
+      },
+      {
+        "position": 3,
+        "name": "ΖΑΝΗΣ",
+        "matches_played": 5,
+        "points": 9
+      },
+      {
+        "position": 4,
+        "name": "ΤΣΟΥΚΑΛΑΣ",
+        "matches_played": 5,
+        "points": 8
+      },
+      {
+        "position": 5,
+        "name": "ΜΠΑΣΤΑΣ",
+        "matches_played": 5,
+        "points": 8
+      },
+      {
+        "position": 7,
+        "name": "ΤΖΑΒΑΡΑΣ",
+        "matches_played": 5,
+        "points": 8
+      },
+      {
+        "position": 8,
+        "name": "ΑΘΑΝΑΣΙΑΔΗΣ",
+        "matches_played": 5,
+        "points": 7
+      },
+      {
+        "position": 9,
+        "name": "MAΓΙΟΠΟΥΛΟΣ",
+        "matches_played": 5,
+        "points": 7
+      },
+      {
+        "position": 10,
+        "name": "ΑΝΑΓΝΩΣΤΕΛΛΗΣ",
+        "matches_played": 4,
+        "points": 7
+      },
+      {
+        "position": 11,
+        "name": "ΒΑΣΙΛΟΠΟΥΛΟΣ",
+        "matches_played": 4,
+        "points": 7
+      },
+      {
+        "position": 13,
+        "name": "ΤΑΞΙΝΤΑΡΙΔΗΣ",
+        "matches_played": 4,
+        "points": 6
+      },
+      {
+        "position": 14,
+        "name": "ΚΟΥΜΠΗΣ",
+        "matches_played": 4,
+        "points": 6
+      },
+      {
+        "position": 15,
+        "name": "ΤΖΩΡΤΖΗΣ",
+        "matches_played": 4,
+        "points": 6
+      },
+      {
+        "position": 16,
+        "name": "ΛΟΥΡΗ",
+        "matches_played": 3,
+        "points": 5
+      },
+      {
+        "position": 17,
+        "name": "ΣΙΔΕΡΗΣ Β.",
+        "matches_played": 4,
+        "points": 5
+      },
+      {
+        "position": 19,
+        "name": "ΣΕΦΕΡΗΣ",
+        "matches_played": 3,
+        "points": 4
+      },
+      {
+        "position": 20,
+        "name": "ΜΥΛΩΝΑΣ",
+        "matches_played": 4,
+        "points": 4
+      },
+      {
+        "position": 21,
+        "name": "ΣΙΔΕΡΗΣ Σ.",
+        "matches_played": 3,
+        "points": 4
+      },
+      {
+        "position": 22,
+        "name": "ΞΑΓΑΣ",
+        "matches_played": 4,
+        "points": 4
+      },
+      {
+        "position": 23,
+        "name": "ΓΕΡΑΣΙΜΟΠΟΥΛΟΣ",
+        "matches_played": 4,
+        "points": 4
+      },
+      {
+        "position": 24,
+        "name": "ΠΑΝΤΑΖΗΣ",
+        "matches_played": 1,
+        "points": 2
+      },
+      {
+        "position": 25,
+        "name": "ΛΙΑΚΟΠΟΥΛΟΣ",
+        "matches_played": 1,
+        "points": 2
+      },
+      {
+        "position": 26,
+        "name": "ΠΑΠΑΡΒΑΝΙΤΗΣ",
+        "matches_played": 1,
+        "points": 1
+      },
+      {
+        "position": 27,
+        "name": "ΑΡΓΥΡΟΠΟΥΛΟΣ",
+        "matches_played": 1,
+        "points": 1
+      }
+    ]
+  },
+  "IANOΥΑΡΙΟΣ": {
+    "matches": [
+      {
+        "date": "2026-01-03",
+        "time": "11:00 - 12:00",
+        "player1": "ΞΑΓΑΣ",
+        "player2": "ΜΥΛΩΝΑΣ",
+        "score": "(4-1) , (3-4)tie 7-3"
+      },
+      {
+        "date": "2026-01-03",
+        "time": "12:00 - 13:00",
+        "player1": "ΖΑΝΗΣ",
+        "player2": "ΜΑΓΙΟΠΟΥΛΟΣ",
+        "score": "(4-3) , (4-2)"
+      },
+      {
+        "date": "2026-01-03",
+        "time": "13:00 - 14:00",
+        "player1": "ΣΙΔΕΡΗΣ Β.",
+        "player2": "ΓΕΡΑΣΙΜΟΠΟΥΛΟΣ",
+        "score": "(4-0) , (4-3)"
+      },
+      {
+        "date": "2026-01-03",
+        "time": "14:00 - 15:00",
+        "player1": "ΛΟΥΚΑΡΕΛΛΗΣ",
+        "player2": "ΑΙΒΑΖΟΓΛΟΥ",
+        "score": "(0-4) , (0-4)"
+      },
+      {
+        "date": "2026-01-10",
+        "time": "12:00 - 13:00",
+        "player1": "ΑΝΑΓΝΩΣΤΕΛΛΗΣ",
+        "player2": "ΛΟΥΡΗ",
+        "score": ""
+      },
+      {
+        "date": "2026-01-10",
+        "time": "13:00 - 14:00",
+        "player1": "ΤΑΞΙΝΤΑΡΙΔΗΣ",
+        "player2": "ΤΖΑΒΑΡΑΣ",
+        "score": ""
+      },
+      {
+        "date": "2026-01-10",
+        "time": "14:00 - 15:00",
+        "player1": "ΤΖΩΡΤΖΗΣ",
+        "player2": "ΛΥΜΠΕΡΤΑΣ",
+        "score": ""
+      },
+      {
+        "date": "2026-01-10",
+        "time": "15:00 - 16:00",
+        "player1": "ΣΙΔΕΡΗΣ Σ.",
+        "player2": "ΑΘΑΝΑΣΙΑΔΗΣ",
+        "score": ""
+      },
+      {
+        "date": "2026-01-17",
+        "time": "11:00 - 12:00",
+        "player1": "ΣΕΦΕΡΗΣ",
+        "player2": "ΤΑΞΙΝΤΑΡΙΔΗΣ",
+        "score": ""
+      },
+      {
+        "date": "2026-01-17",
+        "time": "12:00 - 13:00",
+        "player1": "ΚΟΥΜΠΗΣ",
+        "player2": "ΣΙΔΕΡΗΣ Σ.",
+        "score": ""
+      },
+      {
+        "date": "2026-01-17",
+        "time": "13:00 - 14:00",
+        "player1": "ΤΖΩΡΤΖΗΣ",
+        "player2": "ΑΝΑΓΝΩΣΤΕΛΛΗΣ",
+        "score": ""
+      },
+      {
+        "date": "2026-01-17",
+        "time": "14:00 - 15:00",
+        "player1": "ΛΟΥΡΗ",
+        "player2": "ΑΙΒΑΖΟΓΛΟΥ",
+        "score": ""
+      },
+      {
+        "date": "2026-01-24",
+        "time": "12:00 - 13:00",
+        "player1": "ΣΕΦΕΡΗΣ",
+        "player2": "ΣΙΔΕΡΗΣ Σ.",
+        "score": ""
+      },
+      {
+        "date": "2026-01-24",
+        "time": "13:00 - 14:00",
+        "player1": "ΣΙΔΕΡΗΣ Β.",
+        "player2": "ΞΑΓΑΣ",
+        "score": ""
+      },
+      {
+        "date": "2026-01-24",
+        "time": "14:00 - 15:00",
+        "player1": "ΚΟΥΜΠΗΣ",
+        "player2": "ΒΑΣΙΛΟΠΟΥΛΟΣ",
+        "score": ""
+      },
+      {
+        "date": "2026-01-24",
+        "time": "15:00 - 16:00",
+        "player1": "ΛΟΥΡΗ",
+        "player2": "ΣΚΟΥΡΑΣ",
+        "score": ""
+      },
+      {
+        "date": "2026-01-31",
+        "time": "11:00 - 12:00",
+        "player1": "ΜΥΛΩΝΑΣ",
+        "player2": "ΒΑΣΙΛΟΠΟΥΛΟΣ",
+        "score": ""
+      },
+      {
+        "date": "2026-01-31",
+        "time": "12:00 - 13:00",
+        "player1": "ΛΥΜΠΕΡΤΑΣ",
+        "player2": "ΓΕΡΑΣΙΜΟΠΟΥΛΟΣ",
+        "score": ""
+      },
+      {
+        "date": "2026-01-31",
+        "time": "13:00 - 14:00",
+        "player1": "ΣΕΦΕΡΗΣ",
+        "player2": "ΖΑΝΗΣ",
+        "score": ""
+      },
+      {
+        "date": "2026-01-31",
+        "time": "14:00 - 15:00",
+        "player1": "ΜΠΑΣΤΑΣ",
+        "player2": "HRISTOV",
+        "score": ""
+      }
+    ],
+    "standings": [
+      {
+        "position": 1,
+        "name": "ΑΙΒΑΖΟΓΛΟΥ",
+        "matches_played": 6,
+        "points": 12
+      },
+      {
+        "position": 2,
+        "name": "ΖΑΝΗΣ",
+        "matches_played": 6,
+        "points": 11
+      },
+      {
+        "position": 3,
+        "name": "ΣΚΟΥΡΑΣ",
+        "matches_played": 5,
+        "points": 10
+      },
+      {
+        "position": 4,
+        "name": "ΤΣΟΥΚΑΛΑΣ",
+        "matches_played": 5,
+        "points": 8
+      },
+      {
+        "position": 5,
+        "name": "ΜΠΑΣΤΑΣ",
+        "matches_played": 5,
+        "points": 8
+      },
+      {
+        "position": 7,
+        "name": "ΤΖΑΒΑΡΑΣ",
+        "matches_played": 5,
+        "points": 8
+      },
+      {
+        "position": 8,
+        "name": "MAΓΙΟΠΟΥΛΟΣ",
+        "matches_played": 6,
+        "points": 8
+      },
+      {
+        "position": 9,
+        "name": "ΛΟΥΚΑΡΕΛΛΗΣ",
+        "matches_played": 6,
+        "points": 8
+      },
+      {
+        "position": 10,
+        "name": "ΑΘΑΝΑΣΙΑΔΗΣ",
+        "matches_played": 5,
+        "points": 7
+      },
+      {
+        "position": 11,
+        "name": "ΑΝΑΓΝΩΣΤΕΛΛΗΣ",
+        "matches_played": 4,
+        "points": 7
+      },
+      {
+        "position": 13,
+        "name": "ΣΙΔΕΡΗΣ Β.",
+        "matches_played": 5,
+        "points": 7
+      },
+      {
+        "position": 14,
+        "name": "ΤΑΞΙΝΤΑΡΙΔΗΣ",
+        "matches_played": 4,
+        "points": 6
+      },
+      {
+        "position": 15,
+        "name": "ΚΟΥΜΠΗΣ",
+        "matches_played": 4,
+        "points": 6
+      },
+      {
+        "position": 16,
+        "name": "ΤΖΩΡΤΖΗΣ",
+        "matches_played": 4,
+        "points": 6
+      },
+      {
+        "position": 17,
+        "name": "ΞΑΓΑΣ",
+        "matches_played": 5,
+        "points": 6
+      },
+      {
+        "position": 19,
+        "name": "ΛΥΜΠΕΡΤΑΣ",
+        "matches_played": 4,
+        "points": 5
+      },
+      {
+        "position": 20,
+        "name": "ΜΥΛΩΝΑΣ",
+        "matches_played": 5,
+        "points": 5
+      },
+      {
+        "position": 21,
+        "name": "ΓΕΡΑΣΙΜΟΠΟΥΛΟΣ",
+        "matches_played": 5,
+        "points": 5
+      },
+      {
+        "position": 22,
+        "name": "ΣΕΦΕΡΗΣ",
+        "matches_played": 3,
+        "points": 4
+      },
+      {
+        "position": 23,
+        "name": "ΣΙΔΕΡΗΣ Σ.",
+        "matches_played": 3,
+        "points": 4
+      },
+      {
+        "position": 25,
+        "name": "ΛΙΑΚΟΠΟΥΛΟΣ",
+        "matches_played": 1,
+        "points": 2
+      },
+      {
+        "position": 26,
+        "name": "ΠΑΠΑΡΒΑΝΙΤΗΣ",
+        "matches_played": 1,
+        "points": 1
+      },
+      {
+        "position": 27,
+        "name": "ΑΡΓΥΡΟΠΟΥΛΟΣ",
+        "matches_played": 1,
+        "points": 1
+      }
+    ]
+  }
+};
+
+        const monthNames = {
+            "ΟΚΤΩΒΡΗΣ": "Οκτώβριος 2025",
+            "ΝΟΕΜΒΡΗΣ": "Νοέμβριος 2025",
+            "ΔΕΚΕΜΒΡΗΣ": "Δεκέμβριος 2025",
+            "IANOΥΑΡΙΟΣ": "Ιανουάριος 2026"
+        };
+
+        function formatDate(dateStr) {
+            if (!dateStr) return '';
+            const [year, month, day] = dateStr.split('-');
+            return `${day}/${month}/${year}`;
+        }
+
+        function groupMatchesByDate(matches) {
+            const grouped = {};
+            matches.forEach(match => {
+                if (!grouped[match.date]) {
+                    grouped[match.date] = [];
+                }
+                grouped[match.date].push(match);
+            });
+            return grouped;
+        }
+
+        function renderStandings(standings) {
+            let html = `
+                <table class="standings-table">
+                    <thead>
+                        <tr>
+                            <th>Θέση</th>
+                            <th>Όνομα</th>
+                            <th>Αγώνες</th>
+                            <th>Βαθμοί</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+
+            standings.forEach(player => {
+                const topClass = player.position <= 3 ? 'top-3' : '';
+                const playerSlug = player.name.toLowerCase().replace(/\s+/g, '-').replace(/\./g, '');
+                html += `
+                    <tr class="${topClass}">
+                        <td class="position-cell">${player.position}</td>
+                        <td class="name-cell">
+                            <a href="#player/${playerSlug}" class="player-link" data-player="${player.name}">
+                                ${player.name}
+                            </a>
+                        </td>
+                        <td class="stats-cell">${player.matches_played}</td>
+                        <td class="points-cell">${player.points}</td>
+                    </tr>
+                `;
+            });
+
+            html += `
+                    </tbody>
+                </table>
+            `;
+            return html;
+        }
+
+        function renderMatches(matches) {
+            const grouped = groupMatchesByDate(matches);
+            let html = '';
+
+            Object.keys(grouped).sort().forEach(date => {
+                html += `
+                    <div class="match-group">
+                        <div class="match-date">
+                            📅 ${formatDate(date)}
+                        </div>
+                `;
+
+                grouped[date].forEach(match => {
+                    const hasScore = match.score && match.score.trim() !== '' && match.score !== 'αναβολή';
+                    const isPending = !hasScore;
+                    const isPostponed = match.score === 'αναβολή';
+                    
+                    // Parse score sets and tie-breaks
+                    let player1Sets = [];
+                    let player2Sets = [];
+                    let tiebreakInfo = { set: -1, p1: null, p2: null };
+                    
+                    if (hasScore) {
+                        // Extract tie-break info first
+                        const tiebreakMatch = match.score.match(/(?:TB|tie|ΤΒ)\s*(\d+)-(\d+)/i);
+                        if (tiebreakMatch) {
+                            tiebreakInfo.p1 = parseInt(tiebreakMatch[1]);
+                            tiebreakInfo.p2 = parseInt(tiebreakMatch[2]);
+                        }
+                        
+                        // Parse set scores like "(1-4) , (3-4)"
+                        const setMatches = match.score.match(/\((\d+)-(\d+)\)/g);
+                        if (setMatches) {
+                            setMatches.forEach((setScore, index) => {
+                                const scores = setScore.match(/\((\d+)-(\d+)\)/);
+                                if (scores) {
+                                    const p1Score = parseInt(scores[1]);
+                                    const p2Score = parseInt(scores[2]);
+                                    player1Sets.push(p1Score);
+                                    player2Sets.push(p2Score);
+                                    
+                                    // Determine which set had the tie-break (usually when it's close like 4-3)
+                                    if (tiebreakInfo.p1 !== null && tiebreakInfo.set === -1) {
+                                        if (Math.abs(p1Score - p2Score) <= 1 && (p1Score >= 3 || p2Score >= 3)) {
+                                            tiebreakInfo.set = index;
+                                        }
+                                    }
+                                }
+                            });
+                        }
+                    }
+                    
+                    // Determine overall winner (including tie-break if present)
+                    let player1Wins = 0;
+                    let player2Wins = 0;
+                    
+                    // First, count regular set wins
+                    player1Sets.forEach((score, i) => {
+                        if (score > player2Sets[i]) {
+                            player1Wins++;
+                        } else if (score < player2Sets[i]) {
+                            player2Wins++;
+                        }
+                    });
+                    
+                    // If sets are 1-1 and there's a tie-break, the tie-break determines the overall winner
+                    if (player1Wins === 1 && player2Wins === 1 && tiebreakInfo.p1 !== null) {
+                        if (tiebreakInfo.p1 > tiebreakInfo.p2) {
+                            player1Wins++;
+                        } else {
+                            player2Wins++;
+                        }
+                    }
+                    
+                    const player1IsWinner = player1Wins > player2Wins;
+                    const player2IsWinner = player2Wins > player1Wins;
+                    
+                    // Determine tie-break winner
+                    const p1TiebreakWinner = tiebreakInfo.p1 !== null && tiebreakInfo.p1 > tiebreakInfo.p2;
+                    const p2TiebreakWinner = tiebreakInfo.p2 !== null && tiebreakInfo.p2 > tiebreakInfo.p1;
+
+                    html += `
+                        <div class="match-card">
+                            <div class="match-header">
+                                <div class="match-time">${match.time}</div>
+                                <div class="match-status ${isPending ? 'pending' : ''} ${isPostponed ? 'postponed' : ''}">${
+                                    isPostponed ? 'ΑΝΑΒΟΛΗ' : 
+                                    isPending ? 'Προγραμματισμένος' : 
+                                    'Ολοκληρώθηκε'
+                                }</div>
+                            </div>
+                            <div class="match-body">
+                    `;
+
+                    if (isPostponed) {
+                        html += `<div class="match-postponed">Ο αγώνας αναβλήθηκε</div>`;
+                    } else if (isPending) {
+                        // Show players with dashed score boxes for pending matches
+                        html += `
+                            <div class="match-players-vertical">
+                                <div class="match-player-row">
+                                    <div class="player-name-score">${match.player1}</div>
+                                    <div class="score-row">
+                                        <div class="score-set pending-score">-</div>
+                                        <div class="score-set pending-score">-</div>
+                                    </div>
+                                </div>
+                                <div class="match-player-row">
+                                    <div class="player-name-score">${match.player2}</div>
+                                    <div class="score-row">
+                                        <div class="score-set pending-score">-</div>
+                                        <div class="score-set pending-score">-</div>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    } else {
+                        html += `
+                            <div class="match-players-vertical">
+                                <div class="match-player-row ${player1IsWinner ? 'winner' : ''}">
+                                    <div class="player-name-score ${player1IsWinner ? 'winner' : ''}">${match.player1}</div>
+                                    <div class="score-row">
+                                        ${player1Sets.map((score, i) => `
+                                            <div class="score-set ${score > player2Sets[i] ? 'winner' : ''}">${score}</div>
+                                        `).join('')}
+                                        ${tiebreakInfo.p1 !== null ? `
+                                            <div class="score-set tiebreak ${p1TiebreakWinner ? 'winner' : ''}">${tiebreakInfo.p1}</div>
+                                        ` : ''}
+                                    </div>
+                                </div>
+                                <div class="match-player-row ${player2IsWinner ? 'winner' : ''}">
+                                    <div class="player-name-score ${player2IsWinner ? 'winner' : ''}">${match.player2}</div>
+                                    <div class="score-row">
+                                        ${player2Sets.map((score, i) => `
+                                            <div class="score-set ${score > player1Sets[i] ? 'winner' : ''}">${score}</div>
+                                        `).join('')}
+                                        ${tiebreakInfo.p2 !== null ? `
+                                            <div class="score-set tiebreak ${p2TiebreakWinner ? 'winner' : ''}">${tiebreakInfo.p2}</div>
+                                        ` : ''}
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    }
+
+                    html += `
+                            </div>
+                        </div>
+                    `;
+                });
+
+                html += `</div>`;
+            });
+
+            return html || '<div class="empty-state">Δεν υπάρχουν διαθέσιμοι αγώνες</div>';
+        }
+
+        function renderMonthContent(monthKey) {
+            const data = tournamentData[monthKey];
+            if (!data) return '<div class="empty-state">Δεν υπάρχουν διαθέσιμα δεδομένα</div>';
+
+            return `
+                <div class="content-grid">
+                    <div class="section">
+                        <h2 class="section-title">📊 Βαθμολογία</h2>
+                        ${renderStandings(data.standings)}
+                    </div>
+                    <div class="section">
+                        <h2 class="section-title">🎾 Πρόγραμμα Αγώνων</h2>
+                        ${renderMatches(data.matches)}
+                    </div>
+                </div>
+            `;
+        }
+
+        function initializeTabs() {
+            const tabsContainer = document.getElementById('monthTabs');
+            const contentContainer = document.getElementById('content');
+
+            // Create month tabs
+            Object.keys(tournamentData).forEach((monthKey, index) => {
+                const tab = document.createElement('button');
+                tab.className = 'month-tab';
+                tab.textContent = monthNames[monthKey] || monthKey;
+                tab.dataset.month = monthKey;
+                
+                if (index === Object.keys(tournamentData).length - 1) {
+                    tab.classList.add('active');
+                }
+
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs
+                    document.querySelectorAll('.month-tab').forEach(t => t.classList.remove('active'));
+                    // Add active to clicked tab
+                    tab.classList.add('active');
+
+                    // Update content
+                    const allContent = document.querySelectorAll('.month-content');
+                    allContent.forEach(c => c.classList.remove('active'));
+                    document.getElementById(`content-${monthKey}`).classList.add('active');
+                });
+
+                tabsContainer.appendChild(tab);
+            });
+
+            // Create content sections
+            Object.keys(tournamentData).forEach((monthKey, index) => {
+                const section = document.createElement('div');
+                section.id = `content-${monthKey}`;
+                section.className = 'month-content';
+                
+                if (index === Object.keys(tournamentData).length - 1) {
+                    section.classList.add('active');
+                }
+
+                section.innerHTML = renderMonthContent(monthKey);
+                contentContainer.appendChild(section);
+            });
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeTabs();
+            
+            // Add event delegation for player links (for future functionality)
+            document.addEventListener('click', (e) => {
+                if (e.target.classList.contains('player-link')) {
+                    e.preventDefault();
+                    const playerName = e.target.dataset.player;
+                    openPlayerModal(playerName);
+                }
+            });
+
+            // Close modal when clicking outside
+            document.getElementById('playerModal').addEventListener('click', (e) => {
+                if (e.target.id === 'playerModal') {
+                    closePlayerModal();
+                }
+            });
+
+            // Close modal on ESC key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    closePlayerModal();
+                }
+            });
+        });
+
+        function closePlayerModal() {
+            document.getElementById('playerModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function openPlayerModal(playerName) {
+            const playerData = calculatePlayerStats(playerName);
+            
+            // Update modal content
+            document.getElementById('modalPlayerName').textContent = playerName;
+            document.getElementById('modalPlayerRank').textContent = `Θέση #${playerData.rank} στη Βαθμολογία`;
+            
+            // Update stats
+            const statsHTML = `
+                <div class="player-stat-card">
+                    <div class="player-stat-value">${playerData.matchesPlayed}</div>
+                    <div class="player-stat-label">Αγώνες</div>
+                </div>
+                <div class="player-stat-card">
+                    <div class="player-stat-value">${playerData.wins}</div>
+                    <div class="player-stat-label">Νίκες</div>
+                </div>
+                <div class="player-stat-card">
+                    <div class="player-stat-value">${playerData.losses}</div>
+                    <div class="player-stat-label">Ήττες</div>
+                </div>
+                <div class="player-stat-card">
+                    <div class="player-stat-value">${playerData.points}</div>
+                    <div class="player-stat-label">Βαθμοί</div>
+                </div>
+                <div class="player-stat-card">
+                    <div class="player-stat-value">${playerData.winRate}%</div>
+                    <div class="player-stat-label">Win Rate</div>
+                </div>
+            `;
+            document.getElementById('modalPlayerStats').innerHTML = statsHTML;
+
+            // Update performance charts
+            let chartsHTML = '';
+            if (playerData.wins + playerData.losses > 0) {
+                const winPercent = Math.round((playerData.wins / (playerData.wins + playerData.losses)) * 100);
+                const lossPercent = 100 - winPercent;
+
+                chartsHTML = `
+                    <div class="performance-grid">
+                        <div class="chart-card">
+                            <div class="chart-card-title">Νίκες vs Ήττες</div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" style="width: ${winPercent}%">${playerData.wins}W</div>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar loss-bar" style="width: ${lossPercent}%">${playerData.losses}L</div>
+                            </div>
+                        </div>
+
+                        <div class="chart-card">
+                            <div class="chart-card-title">Στατιστικά Σετ</div>
+                            <div class="stat-row">
+                                <span class="stat-label">Σετ που Κέρδισαν</span>
+                                <span class="stat-value">${playerData.setsWon}</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">Σετ που Έχασαν</span>
+                                <span class="stat-value">${playerData.setsLost}</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">Set Win %</span>
+                                <span class="stat-value" style="color: var(--primary-yellow)">${playerData.setWinRate}%</span>
+                            </div>
+                        </div>
+
+                        <div class="chart-card">
+                            <div class="chart-card-title">Πρόσφατη Φόρμα (Τελευταίοι 5)</div>
+                            ${playerData.recentForm.length > 0 ? `
+                                <div class="form-streak">
+                                    ${playerData.recentForm.map(result => `
+                                        <div class="form-indicator ${result}">${result === 'win' ? 'W' : 'L'}</div>
+                                    `).join('')}
+                                </div>
+                            ` : '<div class="stats-empty">Δεν υπάρχουν αρκετοί αγώνες</div>'}
+                        </div>
+                    </div>
+                `;
+            } else {
+                chartsHTML = '<div class="stats-empty">Δεν υπάρχουν διαθέσιμα δεδομένα αγώνων</div>';
+            }
+            document.getElementById('modalPerformanceCharts').innerHTML = chartsHTML;
+
+            // Update monthly performance
+            let monthlyHTML = '';
+            if (Object.keys(playerData.monthlyStats).length > 0) {
+                const maxPoints = Math.max(...Object.values(playerData.monthlyStats).map(m => m.points));
+                Object.entries(playerData.monthlyStats).forEach(([month, stats]) => {
+                    const barWidth = maxPoints > 0 ? (stats.points / maxPoints) * 100 : 0;
+                    monthlyHTML += `
+                        <div class="month-performance">
+                            <div class="month-label">
+                                <span class="month-name">${month}</span>
+                                <span class="month-points">${stats.points} βαθμοί (${stats.wins}W-${stats.losses}L)</span>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="month-bar" style="width: ${barWidth}%"></div>
+                            </div>
+                        </div>
+                    `;
+                });
+            } else {
+                monthlyHTML = '<div class="stats-empty">Δεν υπάρχουν μηνιαία δεδομένα</div>';
+            }
+            document.getElementById('modalMonthlyPerformance').innerHTML = monthlyHTML;
+            
+            // Update match history
+            let historyHTML = '';
+            if (playerData.matches.length === 0) {
+                historyHTML = '<div class="match-empty-score">Δεν υπάρχουν αγώνες ακόμα</div>';
+            } else {
+                playerData.matches.forEach(match => {
+                    historyHTML += `
+                        <div class="match-history-item">
+                            <div class="match-history-date">${match.date}</div>
+                            <div class="match-history-opponent">
+                                ${match.isHome ? 'vs' : '@'} ${match.opponent}
+                                <br><span>${match.month}</span>
+                            </div>
+                            <div class="match-history-result ${match.result}">${match.result === 'win' ? 'Νίκη' : 'Ήττα'}</div>
+                            <div class="match-history-score">${match.score || 'TBD'}</div>
+                        </div>
+                    `;
+                });
+            }
+            document.getElementById('modalMatchHistory').innerHTML = historyHTML;
+            
+            // Update head-to-head with enhanced display
+            let h2hHTML = '';
+            if (Object.keys(playerData.h2h).length === 0) {
+                h2hHTML = '<div class="match-empty-score">Δεν υπάρχουν δεδομένα head-to-head</div>';
+            } else {
+                // Sort by total matches (most played opponents first)
+                const sortedH2H = Object.entries(playerData.h2h).sort((a, b) => {
+                    const totalA = a[1].wins + a[1].losses;
+                    const totalB = b[1].wins + b[1].losses;
+                    return totalB - totalA;
+                });
+
+                sortedH2H.forEach(([opponent, record]) => {
+                    const total = record.wins + record.losses;
+                    let badge = '';
+                    
+                    if (total >= 2) {
+                        if (record.wins === total) {
+                            badge = '<span class="opponent-badge dominant">🔥 Dominant</span>';
+                        } else if (record.losses === total) {
+                            badge = '<span class="opponent-badge struggling">⚠️ Struggling</span>';
+                        }
+                    }
+
+                    h2hHTML += `
+                        <div class="h2h-item">
+                            <div class="h2h-opponent">
+                                ${opponent}
+                                ${badge}
+                            </div>
+                            <div class="h2h-record">
+                                <span class="wins">${record.wins}</span> - 
+                                <span class="losses">${record.losses}</span>
+                            </div>
+                        </div>
+                    `;
+                });
+            }
+            document.getElementById('modalHeadToHead').innerHTML = h2hHTML;
+            
+            // Show modal
+            document.getElementById('playerModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function calculatePlayerStats(playerName) {
+            const stats = {
+                rank: 0,
+                matchesPlayed: 0,
+                wins: 0,
+                losses: 0,
+                points: 0,
+                winRate: 0,
+                setsWon: 0,
+                setsLost: 0,
+                setWinRate: 0,
+                matches: [],
+                h2h: {},
+                recentForm: [],
+                monthlyStats: {}
+            };
+
+            const monthNames = {
+                "ΟΚΤΩΒΡΗΣ": "Οκτώβριος",
+                "ΝΟΕΜΒΡΗΣ": "Νοέμβριος",
+                "ΔΕΚΕΜΒΡΗΣ": "Δεκέμβριος",
+                "IANOΥΑΡΙΟΣ": "Ιανουάριος"
+            };
+
+            // Get latest standings to find rank
+            const latestMonth = Object.keys(tournamentData)[Object.keys(tournamentData).length - 1];
+            const latestStandings = tournamentData[latestMonth].standings;
+            const playerStanding = latestStandings.find(p => p.name === playerName);
+            
+            if (playerStanding) {
+                stats.rank = playerStanding.position;
+                stats.matchesPlayed = playerStanding.matches_played;
+                stats.points = playerStanding.points;
+            }
+
+            // Go through all matches
+            Object.entries(tournamentData).forEach(([monthKey, data]) => {
+                const monthName = monthNames[monthKey];
+                
+                // Initialize monthly stats
+                if (!stats.monthlyStats[monthName]) {
+                    stats.monthlyStats[monthName] = {
+                        wins: 0,
+                        losses: 0,
+                        points: 0
+                    };
+                }
+
+                data.matches.forEach(match => {
+                    if (match.player1 === playerName || match.player2 === playerName) {
+                        const isPlayer1 = match.player1 === playerName;
+                        const opponent = isPlayer1 ? match.player2 : match.player1;
+                        
+                        if (match.score && match.score !== 'αναβολή') {
+                            // Parse score to determine winner
+                            const setMatches = match.score.match(/\((\d+)-(\d+)\)/g);
+                            if (setMatches) {
+                                let player1Sets = 0;
+                                let player2Sets = 0;
+                                
+                                setMatches.forEach(setScore => {
+                                    const scores = setScore.match(/\((\d+)-(\d+)\)/);
+                                    if (scores) {
+                                        const p1Score = parseInt(scores[1]);
+                                        const p2Score = parseInt(scores[2]);
+                                        if (p1Score > p2Score) {
+                                            player1Sets++;
+                                            if (isPlayer1) stats.setsWon++;
+                                            else stats.setsLost++;
+                                        } else if (p2Score > p1Score) {
+                                            player2Sets++;
+                                            if (isPlayer1) stats.setsLost++;
+                                            else stats.setsWon++;
+                                        }
+                                    }
+                                });
+
+                                // Check tie-break
+                                if (player1Sets === 1 && player2Sets === 1) {
+                                    const tiebreakMatch = match.score.match(/(?:TB|tie|ΤΒ)\s*(\d+)-(\d+)/i);
+                                    if (tiebreakMatch) {
+                                        const tb1 = parseInt(tiebreakMatch[1]);
+                                        const tb2 = parseInt(tiebreakMatch[2]);
+                                        if (tb1 > tb2) {
+                                            player1Sets++;
+                                            if (isPlayer1) stats.setsWon++;
+                                            else stats.setsLost++;
+                                        } else {
+                                            player2Sets++;
+                                            if (isPlayer1) stats.setsLost++;
+                                            else stats.setsWon++;
+                                        }
+                                    }
+                                }
+                                
+                                const playerWon = isPlayer1 ? player1Sets > player2Sets : player2Sets > player1Sets;
+                                
+                                if (playerWon) {
+                                    stats.wins++;
+                                    stats.monthlyStats[monthName].wins++;
+                                    stats.monthlyStats[monthName].points += 2;
+                                    stats.recentForm.push('win');
+                                } else {
+                                    stats.losses++;
+                                    stats.monthlyStats[monthName].losses++;
+                                    stats.monthlyStats[monthName].points += 1;
+                                    stats.recentForm.push('loss');
+                                }
+
+                                stats.matches.push({
+                                    date: formatDate(match.date),
+                                    month: monthName,
+                                    opponent: opponent,
+                                    isHome: isPlayer1,
+                                    result: playerWon ? 'win' : 'loss',
+                                    score: match.score
+                                });
+
+                                // Update H2H
+                                if (!stats.h2h[opponent]) {
+                                    stats.h2h[opponent] = { wins: 0, losses: 0 };
+                                }
+                                if (playerWon) {
+                                    stats.h2h[opponent].wins++;
+                                } else {
+                                    stats.h2h[opponent].losses++;
+                                }
+                            }
+                        }
+                    }
+                });
+            });
+
+            // Sort matches by date (most recent first)
+            stats.matches.reverse();
+
+            // Keep only last 5 for recent form
+            stats.recentForm = stats.recentForm.slice(-5).reverse();
+
+            // Calculate win rate
+            if (stats.wins + stats.losses > 0) {
+                stats.winRate = Math.round((stats.wins / (stats.wins + stats.losses)) * 100);
+            }
+
+            // Calculate set win rate
+            if (stats.setsWon + stats.setsLost > 0) {
+                stats.setWinRate = Math.round((stats.setsWon / (stats.setsWon + stats.setsLost)) * 100);
+            }
+
+            return stats;
+        }
+    </script>
+</body>
+</html>
