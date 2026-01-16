@@ -690,6 +690,11 @@
         flex-wrap: wrap;
       }
 
+      .section {
+        overflow: auto;
+        margin-bottom: 32px;
+      }
+
       .score-set {
         min-width: 36px;
         height: 36px;
@@ -702,19 +707,39 @@
       }
 
       .rules-grid {
-        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      header {
+        height: 350px;
+      }
+
+      .content-grid {
+        padding: 16px;
       }
 
       h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
       }
 
       .section-title {
-        font-size: 1.3rem;
+        font-size: 1rem;
       }
 
       .section {
-        padding: 20px;
+        padding: 16px;
+      }
+
+      .top-3 .position-cell {
+        font-size: 1rem;
+      }
+
+      .standings-table tbody td {
+        padding: 16px 8px;
+      }
+
+      .content-grid {
+        display: block;
       }
     }
 
