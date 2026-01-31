@@ -2716,11 +2716,15 @@
       "IANOΥΑΡΙΟΣ": "Ιανουάριος"
     };
 
-    // Initialize on page load
-    document.addEventListener('DOMContentLoaded', () => {
+    // Initialize on page load - wait for GitHub data first
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Load GitHub data first (if configured)
+      await loadTournamentDataFromGitHub();
+
+      // Then initialize tabs with the correct data
       initializeTabs();
 
-      // Add event delegation for player links (for future functionality)
+      // Add event delegation for player links
       document.addEventListener('click', (e) => {
         if (e.target.classList.contains('player-link')) {
           e.preventDefault();
@@ -3235,15 +3239,25 @@
         let processedCount = 0;
         const totalFiles = Object.keys(uploadedFiles).length;
 
+        console.log(`Processing ${totalFiles} files...`);
+
         for (let [fileName, file] of Object.entries(uploadedFiles)) {
+          console.log(`Processing: ${fileName}`);
           const csvText = await file.text();
           const monthData = parseCSV(csvText, fileName);
 
           if (monthData) {
             const monthKey = detectMonthFromFilename(fileName);
+            console.log(`Month detected: ${monthKey}`);
+
             if (monthKey) {
               newTournamentData[monthKey] = monthData;
+              console.log(`Added ${monthData.matches.length} matches and ${monthData.standings.length} standings for ${monthKey}`);
+            } else {
+              console.warn(`Could not detect month from filename: ${fileName}`);
             }
+          } else {
+            console.warn(`Could not parse CSV: ${fileName}`);
           }
 
           processedCount++;
@@ -3255,14 +3269,24 @@
           throw new Error('No valid tournament data found in uploaded files');
         }
 
-        progressFill.style.width = '60%';
-        progressText.textContent = 'Uploading to GitHub...';
+        console.log('New data parsed:', Object.keys(newTournamentData));
 
-        // Update tournament data
+        progressFill.style.width = '60%';
+        progressText.textContent = 'Merging with existing data...';
+
+        // Merge: Replace specific months while keeping others
+        const updatedMonths = Object.keys(newTournamentData);
         Object.assign(tournamentData, newTournamentData);
+
+        console.log('Data merged. Tournament data now has:', Object.keys(tournamentData));
+
+        progressFill.style.width = '70%';
+        progressText.textContent = 'Uploading to GitHub...';
 
         // Upload to GitHub
         const jsonContent = JSON.stringify(tournamentData, null, 2);
+        console.log(`Uploading ${jsonContent.length} bytes to GitHub...`);
+
         const result = await updateGitHubFile(
           githubConfig.username,
           githubConfig.repo,
@@ -3271,10 +3295,14 @@
           githubConfig.token
         );
 
+        console.log('GitHub upload result:', result);
+
         progressFill.style.width = '100%';
         progressText.textContent = 'Complete!';
 
-        showMessage('success', `✅ Successfully updated ${Object.keys(newTournamentData).length} month(s) and uploaded to GitHub!`);
+        showMessage('success', `✅ Successfully updated ${updatedMonths.join(', ')} and uploaded to GitHub!`);
+
+        console.log('Upload complete! Reloading page in 3 seconds...');
 
         // Reload after 3 seconds
         setTimeout(() => {
@@ -3282,7 +3310,7 @@
         }, 3000);
 
       } catch (error) {
-        console.error('Error:', error);
+        console.error('Upload error:', error);
         showMessage('error', `❌ Error: ${error.message}`);
         uploadButton.disabled = false;
         progressDiv.style.display = 'none';
@@ -3466,27 +3494,45 @@
     async function loadTournamentDataFromGitHub() {
       // Try to get config from localStorage
       const saved = localStorage.getItem('githubConfig');
-      if (!saved) return;
+      if (!saved) {
+        console.log('No GitHub config found, using embedded data');
+        return;
+      }
 
       try {
         const config = JSON.parse(saved);
-        if (!config.username || !config.repo) return;
+        if (!config.username || !config.repo) {
+          console.log('Incomplete GitHub config, using embedded data');
+          return;
+        }
+
+        console.log(`Loading data from: ${config.username}/${config.repo}`);
 
         const url = `https://raw.githubusercontent.com/${config.username}/${config.repo}/main/tournament_data.json`;
+        console.log(`Fetching: ${url}`);
+
         const response = await fetch(url);
 
         if (response.ok) {
           const data = await response.json();
+          console.log('GitHub data loaded:', Object.keys(data));
+
+          // Show what we're loading for each month
+          for (let [month, monthData] of Object.entries(data)) {
+            console.log(`  ${month}: ${monthData.matches?.length || 0} matches, ${monthData.standings?.length || 0} standings`);
+          }
+
           Object.assign(tournamentData, data);
           console.log('✅ Loaded tournament data from GitHub');
+          console.log('Current tournamentData months:', Object.keys(tournamentData));
+        } else {
+          console.log(`GitHub file not found (${response.status}), using embedded data`);
         }
       } catch (e) {
+        console.log('Error loading from GitHub:', e.message);
         console.log('Using embedded tournament data');
       }
     }
-
-    // Load data on page load
-    loadTournamentDataFromGitHub();
 
   </script>
 
