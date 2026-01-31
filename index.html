@@ -1253,6 +1253,340 @@
     .github-setup-text a:hover {
       text-decoration: underline;
     }
+
+    /* Admin Button */
+    .admin-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary-yellow), #FFD700);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 12px rgba(212, 255, 0, 0.4);
+      transition: all 0.3s ease;
+      z-index: 999;
+    }
+
+    .admin-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(212, 255, 0, 0.6);
+    }
+
+    /* Admin Modal */
+    .admin-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: 1001;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .admin-modal.active {
+      display: flex;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .admin-modal-content {
+      background: var(--dark-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      max-width: 600px;
+      width: 100%;
+      padding: 40px;
+      position: relative;
+      max-height: 90vh;
+      overflow-y: auto;
+      animation: slideUp 0.3s ease;
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .admin-modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: transparent;
+      border: 2px solid var(--border-color);
+      color: var(--text-secondary);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      font-size: 1.3rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    }
+
+    .admin-modal-close:hover {
+      border-color: var(--primary-yellow);
+      color: var(--primary-yellow);
+      transform: rotate(90deg);
+    }
+
+    .admin-modal-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      color: var(--primary-yellow);
+      margin-bottom: 8px;
+      letter-spacing: 2px;
+    }
+
+    .admin-modal-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+    }
+
+    .admin-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .admin-step {
+      display: none;
+    }
+
+    .admin-step.active {
+      display: block;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .form-input {
+      background: var(--dark-elevated);
+      border: 2px solid var(--border-color);
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      color: var(--text-primary);
+      transition: all 0.2s ease;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: var(--primary-yellow);
+      box-shadow: 0 0 0 3px rgba(212, 255, 0, 0.1);
+    }
+
+    .file-upload-area {
+      background: var(--dark-elevated);
+      border: 2px dashed var(--border-color);
+      border-radius: 12px;
+      padding: 40px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .file-upload-area:hover {
+      border-color: var(--primary-yellow);
+      background: rgba(212, 255, 0, 0.05);
+    }
+
+    .file-upload-area.dragover {
+      border-color: var(--primary-yellow);
+      background: rgba(212, 255, 0, 0.1);
+    }
+
+    .upload-icon {
+      font-size: 3rem;
+      margin-bottom: 12px;
+    }
+
+    .upload-text {
+      font-size: 1rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .upload-hint {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      opacity: 0.7;
+    }
+
+    .file-list {
+      margin-top: 16px;
+    }
+
+    .file-item {
+      background: var(--dark-elevated);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .file-name {
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .file-remove {
+      background: transparent;
+      border: none;
+      color: #ff4444;
+      cursor: pointer;
+      font-size: 1.2rem;
+      padding: 4px;
+      transition: all 0.2s ease;
+    }
+
+    .file-remove:hover {
+      transform: scale(1.2);
+    }
+
+    .admin-button-primary {
+      background: linear-gradient(135deg, var(--primary-yellow), #FFD700);
+      border: none;
+      border-radius: 8px;
+      padding: 14px 24px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--dark-bg);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .admin-button-primary:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(212, 255, 0, 0.4);
+    }
+
+    .admin-button-primary:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .error-message {
+      background: rgba(255, 68, 68, 0.1);
+      border: 1px solid #ff4444;
+      border-radius: 8px;
+      padding: 12px 16px;
+      color: #ff4444;
+      font-size: 0.9rem;
+      margin-top: 12px;
+    }
+
+    .success-message {
+      background: rgba(0, 217, 138, 0.1);
+      border: 1px solid var(--success-green);
+      border-radius: 8px;
+      padding: 12px 16px;
+      color: var(--success-green);
+      font-size: 0.9rem;
+      margin-top: 12px;
+    }
+
+    .upload-progress {
+      margin-top: 16px;
+    }
+
+    .progress-bar-bg {
+      background: var(--dark-elevated);
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary-yellow), #FFD700);
+      transition: width 0.3s ease;
+      width: 0%;
+    }
+
+    .progress-text {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-top: 8px;
+      text-align: center;
+    }
+
+    /* Mobile Admin Styles */
+    @media (max-width: 768px) {
+      .admin-modal-content {
+        padding: 24px;
+        max-height: 95vh;
+      }
+
+      .admin-modal-title {
+        font-size: 1.5rem;
+      }
+
+      .file-upload-area {
+        padding: 30px 20px;
+      }
+
+      .admin-button {
+        bottom: 16px;
+        right: 16px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+      }
+    }
   </style>
 </head>
 
