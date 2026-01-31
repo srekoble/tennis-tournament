@@ -3902,40 +3902,19 @@
       <!-- Updated Admin Modal (replace the existing Step 2) -->
       <div class="admin-step" id="step2">
         <h2 class="admin-modal-title">Upload CSV Files</h2>
-        <p class="admin-modal-subtitle">Upload CSV files to update tournament data on GitHub</p>
 
-        <!-- GitHub Setup Info -->
-        <div class="github-setup-info" id="githubSetupInfo">
-          <div class="github-setup-title">⚠️ GitHub Token Required</div>
-          <div class="github-setup-text">
-            <p>To use this feature, you need to:</p>
-            <ol style="margin-left: 20px; margin-top: 8px;">
-              <li>Go to <a href="https://github.com/settings/tokens" target="_blank">GitHub Settings → Developer
-                  settings → Personal access tokens</a></li>
-              <li>Create a new token (classic) with <code>repo</code> scope</li>
-              <li>Enter it below (saved in browser only)</li>
-            </ol>
-          </div>
+        <div class="form-group">
+          <input type="text" class="form-input" id="githubUsername" placeholder="Username"
+            style="margin-bottom: 8px;" />
+          <input type="text" class="form-input" id="githubRepo" placeholder="Repo"
+            style="margin-bottom: 8px;" />
+          <input type="password" class="form-input" id="githubToken" placeholder="Access Token" style="margin-bottom: 16px;" />
         </div>
 
         <div class="form-group">
-          <label class="form-label">GitHub Configuration</label>
-          <input type="text" class="form-input" id="githubUsername" placeholder="GitHub Username (e.g., yourname)"
-            style="margin-bottom: 8px;" />
-          <input type="text" class="form-input" id="githubRepo" placeholder="Repository Name (e.g., tennis-tournament)"
-            style="margin-bottom: 8px;" />
-          <input type="password" class="form-input" id="githubToken" placeholder="GitHub Personal Access Token" />
-          <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 4px;">
-            Token is saved locally and never shared
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">CSV Files</label>
           <div class="file-upload-area" id="fileUploadArea" onclick="document.getElementById('fileInput').click()">
             <div class="upload-icon">📁</div>
             <div class="upload-text">Click or drag files here</div>
-            <div class="upload-hint">Supported: CSV files only</div>
             <input type="file" id="fileInput" accept=".csv" multiple style="display: none;"
               onchange="handleFileSelect(event)" />
           </div>
