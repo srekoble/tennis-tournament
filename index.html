@@ -428,6 +428,46 @@
       text-transform: uppercase;
       letter-spacing: 0.5px;
       border-radius: 4px;
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.2s ease;
+    }
+
+    .match-date:hover {
+      background: var(--hover-bg);
+      transform: translateX(4px);
+    }
+
+    .match-date-text {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .collapse-icon {
+      font-size: 1rem;
+      transition: transform 0.3s ease;
+      color: var(--text-secondary);
+    }
+
+    .match-date.collapsed .collapse-icon {
+      transform: rotate(-90deg);
+    }
+
+    .match-list {
+      display: grid;
+      gap: 12px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .match-list.collapsed {
+      max-height: 0 !important;
+      opacity: 0;
+      pointer-events: none;
     }
 
     .match-card {
@@ -2832,12 +2872,23 @@
       const grouped = groupMatchesByDate(matches);
       let html = '';
 
-      Object.keys(grouped).sort().forEach(date => {
+      // Get all dates sorted (newest first for identifying latest)
+      const dates = Object.keys(grouped).sort().reverse();
+      const latestDate = dates[0]; // Most recent date
+
+      dates.forEach((date, index) => {
+        const isLatest = (date === latestDate);
+        const dateId = `date-${date.replace(/\//g, '-')}`;
+
         html += `
                     <div class="match-group">
-                        <div class="match-date">
-                            📅 ${formatDate(date)}
+                        <div class="match-date ${isLatest ? '' : 'collapsed'}" onclick="toggleDateGroup('${dateId}', this)">
+                            <div class="match-date-text">
+                                📅 ${formatDate(date)}
+                            </div>
+                            <span class="collapse-icon">▼</span>
                         </div>
+                        <div class="match-list ${isLatest ? '' : 'collapsed'}" id="${dateId}">
                 `;
 
         grouped[date].forEach(match => {
@@ -2978,7 +3029,9 @@
                     `;
         });
 
-        html += `</div>`;
+        html += `
+                        </div>
+                    </div>`;
       });
 
       return html || '<div class="empty-state">Δεν υπάρχουν διαθέσιμοι αγώνες</div>';
@@ -3000,6 +3053,25 @@
                     </div>
                 </div>
             `;
+    }
+
+    // Toggle date group collapse/expand
+    function toggleDateGroup(dateId, element) {
+      const matchList = document.getElementById(dateId);
+      const dateHeader = element;
+
+      if (matchList && dateHeader) {
+        // Toggle collapsed class
+        matchList.classList.toggle('collapsed');
+        dateHeader.classList.toggle('collapsed');
+
+        // Set max-height for smooth animation
+        if (!matchList.classList.contains('collapsed')) {
+          matchList.style.maxHeight = matchList.scrollHeight + 'px';
+        } else {
+          matchList.style.maxHeight = '0px';
+        }
+      }
     }
 
     // Calculate and update hero statistics
@@ -3077,6 +3149,13 @@
         section.innerHTML = renderMonthContent(monthKey);
         contentContainer.appendChild(section);
       });
+
+      // Initialize max-heights for expanded match lists after a short delay
+      setTimeout(() => {
+        document.querySelectorAll('.match-list:not(.collapsed)').forEach(list => {
+          list.style.maxHeight = list.scrollHeight + 'px';
+        });
+      }, 100);
     }
 
     // Month names mapping (used globally)
