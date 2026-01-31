@@ -843,56 +843,56 @@
         "time": "12:00 - 13:00",
         "player1": "ΑΝΑΓΝΩΣΤΕΛΛΗΣ",
         "player2": "ΛΟΥΡΗ",
-        "score": ""
+        "score": "(1-4) , (1-4)"
       },
       {
         "date": "2026-01-10",
         "time": "13:00 - 14:00",
         "player1": "ΤΑΞΙΝΤΑΡΙΔΗΣ",
         "player2": "ΤΖΑΒΑΡΑΣ",
-        "score": ""
+        "score": "(4-2) , (4-3)"
       },
       {
         "date": "2026-01-10",
         "time": "14:00 - 15:00",
         "player1": "ΤΖΩΡΤΖΗΣ",
         "player2": "ΛΥΜΠΕΡΤΑΣ",
-        "score": ""
+        "score": "(4-2) , (0-4)tie 8-6"
       },
       {
         "date": "2026-01-10",
         "time": "15:00 - 16:00",
-        "player1": "ΣΙΔΕΡΗΣ Σ.",
-        "player2": "ΑΘΑΝΑΣΙΑΔΗΣ",
-        "score": ""
+        "player1": "ΑΘΑΝΑΣΙΑΔΗΣ",
+        "player2": "ΣΙΔΕΡΗΣ Σ.",
+        "score": "(4-2) , (4-1)"
       },
       {
         "date": "2026-01-17",
         "time": "11:00 - 12:00",
         "player1": "ΣΕΦΕΡΗΣ",
         "player2": "ΤΑΞΙΝΤΑΡΙΔΗΣ",
-        "score": ""
+        "score": "(3-4) , (1-4)"
       },
       {
         "date": "2026-01-17",
         "time": "12:00 - 13:00",
         "player1": "ΚΟΥΜΠΗΣ",
         "player2": "ΣΙΔΕΡΗΣ Σ.",
-        "score": ""
+        "score": "(3-4) , (4-3)tie 6-7"
       },
       {
         "date": "2026-01-17",
         "time": "13:00 - 14:00",
         "player1": "ΤΖΩΡΤΖΗΣ",
         "player2": "ΑΝΑΓΝΩΣΤΕΛΛΗΣ",
-        "score": ""
+        "score": "(4-2) , (4-2)"
       },
       {
         "date": "2026-01-17",
         "time": "14:00 - 15:00",
         "player1": "ΛΟΥΡΗ",
         "player2": "ΑΙΒΑΖΟΓΛΟΥ",
-        "score": ""
+        "score": "(3-4) , (4-2)tie 2-7"
       },
       {
         "date": "2026-01-24",
@@ -955,8 +955,8 @@
       {
         "position": 1,
         "name": "ΑΙΒΑΖΟΓΛΟΥ",
-        "matches_played": 6,
-        "points": 12
+        "matches_played": 7,
+        "points": 14
       },
       {
         "position": 2,
@@ -972,105 +972,105 @@
       },
       {
         "position": 4,
+        "name": "ΤΑΞΙΝΤΑΡΙΔΗΣ",
+        "matches_played": 6,
+        "points": 10
+      },
+      {
+        "position": 5,
+        "name": "ΤΖΩΡΤΖΗΣ",
+        "matches_played": 6,
+        "points": 10
+      },
+      {
+        "position": 7,
+        "name": "ΑΘΑΝΑΣΙΑΔΗΣ",
+        "matches_played": 6,
+        "points": 9
+      },
+      {
+        "position": 8,
+        "name": "ΑΝΑΓΝΩΣΤΕΛΛΗΣ",
+        "matches_played": 6,
+        "points": 9
+      },
+      {
+        "position": 9,
         "name": "ΤΣΟΥΚΑΛΑΣ",
         "matches_played": 5,
         "points": 8
       },
       {
-        "position": 5,
+        "position": 10,
         "name": "ΜΠΑΣΤΑΣ",
         "matches_played": 5,
         "points": 8
       },
       {
-        "position": 7,
-        "name": "ΤΖΑΒΑΡΑΣ",
+        "position": 11,
+        "name": "HRISTOV",
         "matches_played": 5,
         "points": 8
       },
       {
-        "position": 8,
-        "name": "ΜΑΓΙΟΠΟΥΛΟΣ",
-        "matches_played": 6,
-        "points": 8
-      },
-      {
-        "position": 9,
+        "position": 13,
         "name": "ΛΟΥΚΑΡΕΛΛΗΣ",
         "matches_played": 6,
         "points": 8
       },
       {
-        "position": 10,
-        "name": "ΑΘΑΝΑΣΙΑΔΗΣ",
+        "position": 14,
+        "name": "ΛΟΥΡΗ",
         "matches_played": 5,
-        "points": 7
+        "points": 8
       },
       {
-        "position": 11,
-        "name": "ΑΝΑΓΝΩΣΤΕΛΛΗΣ",
+        "position": 15,
+        "name": "ΒΑΣΙΛΟΠΟΥΛΟΣ",
         "matches_played": 4,
         "points": 7
       },
       {
-        "position": 13,
+        "position": 16,
         "name": "ΣΙΔΕΡΗΣ Β.",
         "matches_played": 5,
         "points": 7
       },
       {
-        "position": 14,
-        "name": "ΤΑΞΙΝΤΑΡΙΔΗΣ",
-        "matches_played": 4,
-        "points": 6
-      },
-      {
-        "position": 15,
-        "name": "ΚΟΥΜΠΗΣ",
-        "matches_played": 4,
-        "points": 6
-      },
-      {
-        "position": 16,
-        "name": "ΤΖΩΡΤΖΗΣ",
-        "matches_played": 4,
-        "points": 6
-      },
-      {
         "position": 17,
+        "name": "ΚΟΥΜΠΗΣ",
+        "matches_played": 5,
+        "points": 7
+      },
+      {
+        "position": 19,
         "name": "ΞΑΓΑΣ",
         "matches_played": 5,
         "points": 6
       },
       {
-        "position": 19,
+        "position": 20,
         "name": "ΛΥΜΠΕΡΤΑΣ",
-        "matches_played": 4,
-        "points": 5
+        "matches_played": 5,
+        "points": 6
       },
       {
-        "position": 20,
+        "position": 21,
         "name": "ΜΥΛΩΝΑΣ",
         "matches_played": 5,
         "points": 5
       },
       {
-        "position": 21,
+        "position": 22,
         "name": "ΓΕΡΑΣΙΜΟΠΟΥΛΟΣ",
         "matches_played": 5,
         "points": 5
       },
       {
-        "position": 22,
-        "name": "ΣΕΦΕΡΗΣ",
-        "matches_played": 3,
-        "points": 4
-      },
-      {
         "position": 23,
-        "name": "ΣΙΔΕΡΗΣ Σ.",
-        "matches_played": 3,
-        "points": 4
+        "name": "ΣΕΦΕΡΗΣ",
+        "matches_played": 4,
+        "points": 5
       },
       {
         "position": 25,
