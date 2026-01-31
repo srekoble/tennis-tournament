@@ -1267,14 +1267,21 @@
       width: 56px;
       height: 56px;
       border-radius: 50%;
-      background: #ffd90035;
+      background: linear-gradient(135deg, var(--primary-yellow), #FFD700);
       border: none;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.5rem;
+      box-shadow: 0 4px 12px rgba(212, 255, 0, 0.4);
+      transition: all 0.3s ease;
       z-index: 999;
+    }
+
+    .admin-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(212, 255, 0, 0.6);
     }
 
     /* Admin Modal */
@@ -1597,15 +1604,15 @@
         <div class="subtitle">Πρωτάθλημα 2025-2026</div>
         <div class="hero-stats">
           <div class="hero-stat">
-            <div class="hero-stat-number">23</div>
+            <div class="hero-stat-number" id="totalAthletes">27</div>
             <div class="hero-stat-label">Αθλητές</div>
           </div>
           <div class="hero-stat">
-            <div class="hero-stat-number">73</div>
+            <div class="hero-stat-number" id="totalMatches">73</div>
             <div class="hero-stat-label">Αγώνες</div>
           </div>
           <div class="hero-stat">
-            <div class="hero-stat-number">4</div>
+            <div class="hero-stat-number" id="totalMonths">4</div>
             <div class="hero-stat-label">Μήνες</div>
           </div>
         </div>
@@ -2995,6 +3002,38 @@
             `;
     }
 
+    // Calculate and update hero statistics
+    function updateHeroStats() {
+      // Get unique athletes from all standings
+      const allAthletes = new Set();
+      let totalMatches = 0;
+
+      Object.values(tournamentData).forEach(monthData => {
+        // Add all athletes from standings
+        monthData.standings.forEach(standing => {
+          if (standing.name) {
+            allAthletes.add(standing.name);
+          }
+        });
+
+        // Count matches
+        totalMatches += monthData.matches.length;
+      });
+
+      const totalMonths = Object.keys(tournamentData).length;
+
+      // Update the hero stats
+      const totalAthletesEl = document.getElementById('totalAthletes');
+      const totalMatchesEl = document.getElementById('totalMatches');
+      const totalMonthsEl = document.getElementById('totalMonths');
+
+      if (totalAthletesEl) totalAthletesEl.textContent = allAthletes.size;
+      if (totalMatchesEl) totalMatchesEl.textContent = totalMatches;
+      if (totalMonthsEl) totalMonthsEl.textContent = totalMonths;
+
+      console.log(`Hero stats updated: ${allAthletes.size} athletes, ${totalMatches} matches, ${totalMonths} months`);
+    }
+
     function initializeTabs() {
       const tabsContainer = document.getElementById('monthTabs');
       const contentContainer = document.getElementById('content');
@@ -3052,6 +3091,9 @@
     document.addEventListener('DOMContentLoaded', async () => {
       // Load GitHub data first (if configured)
       await loadTournamentDataFromGitHub();
+
+      // Update hero statistics with actual data
+      updateHeroStats();
 
       // Then initialize tabs with the correct data
       initializeTabs();
