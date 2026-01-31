@@ -3346,10 +3346,32 @@
 
     function detectMonthFromFilename(filename) {
       const upperName = filename.toUpperCase();
-      if (upperName.includes('ΟΚΤΩΒΡ')) return 'ΟΚΤΩΒΡΗΣ';
-      if (upperName.includes('ΝΟΕΜΒΡ')) return 'ΝΟΕΜΒΡΗΣ';
-      if (upperName.includes('ΔΕΚΕΜΒΡ')) return 'ΔΕΚΕΜΒΡΗΣ';
-      if (upperName.includes('ΙΑΝΟΥΑΡ') || upperName.includes('IANOY')) return 'IANOΥΑΡΙΟΣ';
+
+      // October - ΟΚΤΩΒΡΗΣ
+      if (upperName.includes('ΟΚΤΩΒΡ') || upperName.includes('OCTOB')) {
+        return 'ΟΚΤΩΒΡΗΣ';
+      }
+
+      // November - ΝΟΕΜΒΡΗΣ  
+      if (upperName.includes('ΝΟΕΜΒΡ') || upperName.includes('NOVEMB')) {
+        return 'ΝΟΕΜΒΡΗΣ';
+      }
+
+      // December - ΔΕΚΕΜΒΡΗΣ
+      if (upperName.includes('ΔΕΚΕΜΒΡ') || upperName.includes('DECEMB')) {
+        return 'ΔΕΚΕΜΒΡΗΣ';
+      }
+
+      // January - IANOΥΑΡΙΟΣ 
+      // Handles: ΙΑΝΟΥΑΡΙΟΣ (all Greek), IANOΥΑΡΙΟΣ (mixed), IANOY, January, etc.
+      if (upperName.includes('ΙΑΝΟΥΑΡ') ||
+        upperName.includes('IANOUARI') ||
+        upperName.startsWith('IANO') ||  // Catches IANOΥ... pattern
+        upperName.includes('IANOY') ||
+        upperName.includes('JANUAR')) {
+        return 'IANOΥΑΡΙΟΣ';
+      }
+
       return null;
     }
 
