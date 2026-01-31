@@ -13,6 +13,12 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Oswald:wght@300;400;600;700&display=swap"
     rel="stylesheet">
+
+  <!-- Material Icons Rounded -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet">
+
   <style>
     :root {
       --primary-yellow: #D4FF00;
@@ -33,6 +39,25 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+
+    /* Material Icons Setup */
+    .material-symbols-rounded {
+      font-family: 'Material Symbols Rounded';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      font-feature-settings: 'liga';
     }
 
     body {
@@ -448,13 +473,13 @@
     }
 
     .collapse-icon {
-      font-size: 1rem;
+      font-size: 1.2rem;
       transition: transform 0.3s ease;
       color: var(--text-secondary);
     }
 
     .match-date.collapsed .collapse-icon {
-      transform: rotate(-90deg);
+      transform: rotate(180deg);
     }
 
     .match-list {
@@ -1663,22 +1688,22 @@
       <h3>Κανόνες Τουρνουά</h3>
       <div class="rules-grid">
         <div class="rule-card">
-          <span class="rule-icon">🏆</span>
+          <span class="rule-icon material-symbols-rounded">emoji_events</span>
           <div class="rule-title">Βαθμολογία</div>
           <div class="rule-description">Νίκη = 2 βαθμοί<br>Ήττα = 1 βαθμός</div>
         </div>
         <div class="rule-card">
-          <span class="rule-icon">🔄</span>
+          <span class="rule-icon material-symbols-rounded">sync</span>
           <div class="rule-title">Μορφή</div>
           <div class="rule-description">Όλοι παίζουν με όλους (round robin)</div>
         </div>
         <div class="rule-card">
-          <span class="rule-icon">📅</span>
+          <span class="rule-icon material-symbols-rounded">calendar_today</span>
           <div class="rule-title">Αγώνες</div>
           <div class="rule-description">Κάθε Σάββατο<br>2 σετ × 4 games</div>
         </div>
         <div class="rule-card">
-          <span class="rule-icon">⚡</span>
+          <span class="rule-icon material-symbols-rounded">bolt</span>
           <div class="rule-title">Tie-break</div>
           <div class="rule-description">Σε ισοπαλία 1-1<br>Tie-break στο 7</div>
         </div>
@@ -1700,16 +1725,24 @@
         </div>
         <div class="player-modal-body">
           <div class="player-section">
-            <h3 class="player-section-title">📈 Απόδοση</h3>
+            <h3 class="player-section-title"><span class="material-symbols-rounded"
+                style="vertical-align: middle; font-size: 1.3rem;">trending_up</span> Απόδοση</h3>
             <div id="modalPerformanceCharts"></div>
           </div>
           <div class="player-section">
-            <h3 class="player-section-title">📅 Μηνιαία Απόδοση</h3>
+            <h3 class="player-section-title"><span class="material-symbols-rounded"
+                style="vertical-align: middle; font-size: 1.3rem;">calendar_month</span> Μηνιαία Απόδοση</h3>
             <div id="modalMonthlyPerformance"></div>
           </div>
           <div class="player-section">
-            <h3 class="player-section-title">📊 Ιστορικό Αγώνων</h3>
+            <h3 class="player-section-title"><span class="material-symbols-rounded"
+                style="vertical-align: middle; font-size: 1.3rem;">history</span> Ιστορικό Αγώνων</h3>
             <div id="modalMatchHistory"></div>
+          </div>
+          <div class="player-section">
+            <h3 class="player-section-title"><span class="material-symbols-rounded"
+                style="vertical-align: middle; font-size: 1.3rem;">sports_tennis</span> Head-to-Head</h3>
+            <div id="modalHeadToHead"></div>
           </div>
         </div>
       </div>
@@ -2884,9 +2917,10 @@
                     <div class="match-group">
                         <div class="match-date ${isLatest ? '' : 'collapsed'}" onclick="toggleDateGroup('${dateId}', this)">
                             <div class="match-date-text">
-                                📅 ${formatDate(date)}
+                                <span class="material-symbols-rounded" style="font-size: 1.2rem;">calendar_today</span>
+                                ${formatDate(date)}
                             </div>
-                            <span class="collapse-icon">▼</span>
+                            <span class="collapse-icon material-symbols-rounded">expand_more</span>
                         </div>
                         <div class="match-list ${isLatest ? '' : 'collapsed'}" id="${dateId}">
                 `;
@@ -3336,6 +3370,7 @@
       // Update head-to-head with enhanced display
       let h2hHTML = '';
       if (Object.keys(playerData.h2h).length === 0) {
+        h2hHTML = '<div class="stats-empty">Δεν υπάρχουν H2H δεδομένα</div>';
       } else {
         // Sort by total matches (most played opponents first)
         const sortedH2H = Object.entries(playerData.h2h).sort((a, b) => {
@@ -3350,9 +3385,9 @@
 
           if (total >= 2) {
             if (record.wins === total) {
-              badge = '<span class="opponent-badge dominant">🔥 Dominant</span>';
+              badge = '<span class="opponent-badge dominant"><span class="material-symbols-rounded" style="font-size: 1rem; vertical-align: middle;">local_fire_department</span> Dominant</span>';
             } else if (record.losses === total) {
-              badge = '<span class="opponent-badge struggling">⚠️ Struggling</span>';
+              badge = '<span class="opponent-badge struggling"><span class="material-symbols-rounded" style="font-size: 1rem; vertical-align: middle;">warning</span> Struggling</span>';
             }
           }
 
@@ -3370,6 +3405,7 @@
                     `;
         });
       }
+      document.getElementById('modalHeadToHead').innerHTML = h2hHTML;
 
       // Show modal
       document.getElementById('playerModal').classList.add('active');
@@ -3615,10 +3651,12 @@
         html += `
       <div class="file-item">
         <div class="file-name">
-          <span>📄</span>
+          <span class="material-symbols-rounded" style="font-size: 1.2rem; color: var(--primary-yellow);">description</span>
           <span>${fileName}</span>
         </div>
-        <button class="file-remove" onclick="removeFile('${fileName}')" title="Remove">×</button>
+        <button class="file-remove" onclick="removeFile('${fileName}')" title="Remove">
+          <span class="material-symbols-rounded" style="font-size: 1.2rem;">close</span>
+        </button>
       </div>
     `;
       }
@@ -4109,7 +4147,7 @@
 
   <!-- Admin Button -->
   <button class="admin-button" onclick="openAdminModal()" title="Admin Upload">
-    ⚙️
+    <span class="material-symbols-rounded">settings</span>
   </button>
 
   <!-- Admin Modal -->
@@ -4139,48 +4177,21 @@
       <!-- Updated Admin Modal (replace the existing Step 2) -->
       <div class="admin-step" id="step2">
         <h2 class="admin-modal-title">Upload CSV Files</h2>
-        <p class="admin-modal-subtitle">Upload CSV files to update tournament data on GitHub</p>
 
-        <!-- GitHub Setup Info -->
-        <div class="github-setup-info" id="githubSetupInfo">
-          <div class="github-setup-title">⚠️ GitHub Token Required</div>
-          <div class="github-setup-text">
-            <p><strong>This admin panel automatically updates BOTH files:</strong></p>
-            <ul style="margin-left: 20px; margin-top: 8px;">
-              <li>✅ <code>tournament_data.json</code> - Data file</li>
-              <li>✅ <code>index.html</code> - Main website (with embedded data)</li>
-            </ul>
-            <p style="margin-top: 12px;">To use this feature, you need to:</p>
-            <ol style="margin-left: 20px; margin-top: 8px;">
-              <li>Go to <a href="https://github.com/settings/tokens" target="_blank">GitHub Settings → Developer
-                  settings → Personal access tokens</a></li>
-              <li>Create a new token (classic) with <code>repo</code> scope</li>
-              <li>Enter it below (saved in browser only)</li>
-              <li style="margin-top: 8px;"><strong>Important:</strong> Both <code>index.html</code> and
-                <code>tournament_data.json</code> must exist in your repo root</li>
-              <li><strong>Note:</strong> Changes appear for all users in 1-2 minutes after GitHub Pages deploys</li>
-            </ol>
-          </div>
+        <div class="form-group">
+          <input type="text" class="form-input" id="githubUsername" placeholder="Username"
+            style="margin-bottom: 8px;" />
+          <input type="text" class="form-input" id="githubRepo" placeholder="Repo"
+            style="margin-bottom: 8px;" />
+          <input type="password" class="form-input" id="githubToken" placeholder="Access Token" style="margin-bottom: 16px;" />
         </div>
 
         <div class="form-group">
-          <label class="form-label">GitHub Configuration</label>
-          <input type="text" class="form-input" id="githubUsername" placeholder="GitHub Username (e.g., yourname)"
-            style="margin-bottom: 8px;" />
-          <input type="text" class="form-input" id="githubRepo" placeholder="Repository Name (e.g., tennis-tournament)"
-            style="margin-bottom: 8px;" />
-          <input type="password" class="form-input" id="githubToken" placeholder="GitHub Personal Access Token" />
-          <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 4px;">
-            Token is saved locally and never shared
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">CSV Files</label>
           <div class="file-upload-area" id="fileUploadArea" onclick="document.getElementById('fileInput').click()">
-            <div class="upload-icon">📁</div>
+            <div class="upload-icon">
+              <span class="material-symbols-rounded" style="font-size: 3rem;">upload_file</span>
+            </div>
             <div class="upload-text">Click or drag files here</div>
-            <div class="upload-hint">Supported: CSV files only</div>
             <input type="file" id="fileInput" accept=".csv" multiple style="display: none;"
               onchange="handleFileSelect(event)" />
           </div>
