@@ -82,16 +82,8 @@ header {
   }
 }
 
-/* Gradient overlay */
-header::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(ellipse at center, rgba(212, 255, 0, 0.05) 0%, transparent 70%);
-  pointer-events: none;
+.head-to-head {
+  display: none;
 }
 
 .hero-content {
@@ -790,7 +782,7 @@ header::after {
 /* Player Detail Modal */
 .player-modal {
   position: fixed;
-  top: 0;
+  top: 24px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -811,7 +803,7 @@ header::after {
 .player-modal-content {
   background: var(--dark-surface);
   border: 1px solid var(--border-color);
-  border-radius: 16px;
+  border-radius: 32px;
   max-width: 900px;
   width: 100%;
   max-height: 90vh;
@@ -868,16 +860,13 @@ header::after {
   font-size: 2.5rem;
   color: var(--white);
   margin-bottom: 8px;
-  letter-spacing: 2px;
 }
 
 .player-rank {
   font-family: 'Inter', sans-serif;
-  font-size: 1rem;
+  font-size: .85rem;
   color: var(--primary-yellow);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-weight: normal;
 }
 
 .player-stats-grid {
@@ -938,7 +927,7 @@ header::after {
 /* Performance Charts */
 .performance-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 16px;
   margin-bottom: 24px;
 }
@@ -953,32 +942,29 @@ header::after {
 .chart-card-title {
   font-family: 'Inter', sans-serif;
   font-size: 0.9rem;
-  font-weight: 600;
   color: var(--text-secondary);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .progress-bar-container {
   background: rgba(255, 255, 255, 0.05);
-  height: 32px;
-  border-radius: 8px;
+  height: 16px;
+  border-radius: 32px;
   overflow: hidden;
   position: relative;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .progress-bar {
   height: 100%;
   background: linear-gradient(90deg, var(--success-green), #00ffaa);
-  border-radius: 8px;
+  border-radius: 32px;
   transition: width 0.6s ease;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 0;
   color: var(--white);
 }
 
@@ -1044,13 +1030,14 @@ header::after {
 .month-label {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   font-size: 0.85rem;
 }
 
 .month-name {
   color: var(--text-secondary);
-  font-weight: 600;
+  font-weight: normal;
+  opacity: .4;
 }
 
 .month-points {
@@ -1059,9 +1046,9 @@ header::after {
 }
 
 .month-bar {
-  height: 24px;
-  background: linear-gradient(90deg, var(--primary-yellow), #FFD700);
-  border-radius: 6px;
+  height: 100%;
+  background: linear-gradient(90deg, var(--success-green), #00ffaa);
+  border-radius: 32px;
   transition: width 0.6s ease;
 }
 
@@ -1131,6 +1118,7 @@ header::after {
   color: var(--text-secondary);
   font-weight: 500;
   font-size: 0.85rem;
+  display: none;
 }
 
 .match-history-result {
@@ -1212,7 +1200,7 @@ header::after {
   }
 
   .player-name-title {
-    font-size: 2rem;
+    font-size: 1.2rem;
   }
 
   .player-stats-grid {

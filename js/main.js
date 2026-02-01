@@ -1614,7 +1614,7 @@ function openPlayerModal(playerName) {
                         <div class="month-performance">
                             <div class="month-label">
                                 <span class="month-name">${month}</span>
-                                <span class="month-points">${stats.points} βαθμοί (${stats.wins}W-${stats.losses}L)</span>
+                                <span class="month-points">${stats.points} βαθμοί</span>
                             </div>
                             <div class="progress-bar-container">
                                 <div class="month-bar" style="width: ${barWidth}%"></div>
