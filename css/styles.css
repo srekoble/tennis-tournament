@@ -720,6 +720,11 @@ header {
 /* Responsive */
 @media (max-width: 768px) {
 
+  .position-cell,
+  .standings-table thead th:first-child {
+    display: none;
+  }
+
   .month-tabs {
     flex-wrap: nowrap;
     justify-content: flex-end;
@@ -764,10 +769,6 @@ header {
 
   .section {
     padding: 16px;
-  }
-
-  .top-3 .position-cell {
-    font-size: 1rem;
   }
 
   .standings-table tbody td {
