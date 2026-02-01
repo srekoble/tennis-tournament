@@ -98,7 +98,7 @@ header::after {
   position: relative;
   z-index: 2;
   max-width: 1200px;
-  padding: 80px 40px 40px;
+  padding: 80px 40px 56px;
   width: 100%;
 }
 
@@ -130,7 +130,6 @@ header::after {
 .hero-info-row {
   display: flex;
   gap: 32px;
-  margin-bottom: 48px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -187,12 +186,8 @@ header::after {
 
 /* Hero Mobile Responsive */
 @media (max-width: 768px) {
-  header {
-    min-height: 400px;
-  }
-
   .hero-content {
-    padding: 60px 24px;
+    padding: 60px 24px 40px;
   }
 
   .hero-title {
@@ -732,6 +727,13 @@ header::after {
 
 /* Responsive */
 @media (max-width: 768px) {
+
+  .month-tabs {
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    overflow: auto;
+  }
+
   .score-row {
     flex-wrap: wrap;
   }
@@ -754,10 +756,6 @@ header::after {
 
   .rules-grid {
     gap: 8px;
-  }
-
-  header {
-    height: 350px;
   }
 
   .content-grid {
@@ -867,7 +865,6 @@ header::after {
 }
 
 .player-name-title {
-  font-family: 'Bebas Neue', sans-serif;
   font-size: 2.5rem;
   color: var(--white);
   margin-bottom: 8px;
@@ -1208,10 +1205,6 @@ header::after {
 @media (max-width: 768px) {
   .player-modal-content {
     max-height: 95vh;
-  }
-
-  button.month-tab:not(.active) {
-    display: none;
   }
 
   .player-modal-header {
