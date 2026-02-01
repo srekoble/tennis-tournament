@@ -1279,7 +1279,7 @@ function renderMatches(matches) {
                             <div class="match-header">
                                 <div class="match-time">${match.time}</div>
                                 <div class="match-status ${isPending ? 'pending' : ''} ${isPostponed ? 'postponed' : ''} ${isPendingResults ? 'pending-results' : ''}">${isPostponed ? 'ΑΝΑΒΟΛΗ' :
-          isPendingResults ? 'Αναμονή Αποτελεσμάτων' :
+          isPendingResults ? 'Pending' :
             isPending ? 'Προγραμματισμένος' :
               'Ολοκληρώθηκε'
         }</div>
