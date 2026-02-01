@@ -1359,11 +1359,11 @@ function renderMonthContent(monthKey) {
   return `
                 <div class="content-grid">
                     <div class="section">
-                        <h2 class="section-title">📊 Βαθμολογία</h2>
+                        <h2 class="section-title">Βαθμολογία</h2>
                         ${renderStandings(data.standings)}
                     </div>
                     <div class="section">
-                        <h2 class="section-title">🎾 Πρόγραμμα Αγώνων</h2>
+                        <h2 class="section-title">Πρόγραμμα Αγώνων</h2>
                         ${renderMatches(data.matches)}
                     </div>
                 </div>

@@ -24,53 +24,38 @@
 
 <body>
   <div class="container">
+    <!-- REPLACE THIS SECTION IN index.html -->
+    <!-- Find lines 27-47 (the <header> section) and replace with: -->
+    
     <header>
       <div class="hero-content">
-        <div class="tournament-badge">⚡ Live Tournament</div>
-        <h1>Tennis Tournament</h1>
-        <div class="subtitle">Πρωτάθλημα 2025-2026</div>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <div class="hero-stat-number" id="totalAthletes">27</div>
-            <div class="hero-stat-label">Αθλητές</div>
+        <div class="hero-year">ΠΡΩΤΑΘΛΗΜΑ 2025-2026</div>
+    
+        <h1 class="hero-title">
+          Tennis
+        </h1>
+    
+        <div class="hero-divider"></div>
+    
+        <div class="hero-info-row">
+          <div class="info-item">
+            <span class="material-symbols-rounded">calendar_today</span>
+            Κάθε Σάββατο
           </div>
-          <div class="hero-stat">
-            <div class="hero-stat-number" id="totalMatches">73</div>
-            <div class="hero-stat-label">Αγώνες</div>
+          <div class="info-item">
+            <span class="material-symbols-rounded">sports_tennis</span>
+            
+            <div id="totalAthletes">27</div>
+            Αθλητές
           </div>
-          <div class="hero-stat">
-            <div class="hero-stat-number" id="totalMonths">4</div>
-            <div class="hero-stat-label">Μήνες</div>
+          <div class="info-item">
+            <span class="material-symbols-rounded">bolt</span>
+            <div id="totalMatches">73</div>
+            Αγώνες
           </div>
         </div>
       </div>
     </header>
-
-    <div class="info-box">
-      <h3>Κανόνες Τουρνουά</h3>
-      <div class="rules-grid">
-        <div class="rule-card">
-          <span class="rule-icon material-symbols-rounded">emoji_events</span>
-          <div class="rule-title">Βαθμολογία</div>
-          <div class="rule-description">Νίκη = 2 βαθμοί<br>Ήττα = 1 βαθμός</div>
-        </div>
-        <div class="rule-card">
-          <span class="rule-icon material-symbols-rounded">sync</span>
-          <div class="rule-title">Μορφή</div>
-          <div class="rule-description">Όλοι παίζουν με όλους (round robin)</div>
-        </div>
-        <div class="rule-card">
-          <span class="rule-icon material-symbols-rounded">calendar_today</span>
-          <div class="rule-title">Αγώνες</div>
-          <div class="rule-description">Κάθε Σάββατο<br>2 σετ × 4 games</div>
-        </div>
-        <div class="rule-card">
-          <span class="rule-icon material-symbols-rounded">bolt</span>
-          <div class="rule-title">Tie-break</div>
-          <div class="rule-description">Σε ισοπαλία 1-1<br>Tie-break στο 7</div>
-        </div>
-      </div>
-    </div>
 
     <div class="month-tabs" id="monthTabs"></div>
 
