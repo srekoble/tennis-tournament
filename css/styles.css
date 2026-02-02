@@ -783,7 +783,7 @@ header {
 /* Player Detail Modal */
 .player-modal {
   position: fixed;
-  top: 24px;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
@@ -802,7 +802,8 @@ header {
 }
 
 .player-modal-content {
-  background: var(--dark-surface);
+  /* background: var(--dark-surface); */
+  background: #0a0e1a;
   border: 1px solid var(--border-color);
   border-radius: 32px;
   max-width: 900px;
@@ -811,6 +812,7 @@ header {
   overflow-y: auto;
   position: relative;
   animation: slideUp 0.3s ease;
+  margin-top: 32px;
 }
 
 @keyframes slideUp {
@@ -826,11 +828,15 @@ header {
 }
 
 .player-modal-header {
-  background: var(--dark-elevated);
+  /* background: var(--dark-elevated); */
   padding: 32px;
   border-bottom: 1px solid var(--border-color);
   position: relative;
   border-radius: 16px 16px 0 0;
+  position: sticky;
+  top: 0;
+  background: #0a0e1a;
+  z-index: 1;
 }
 
 .player-modal-close {
@@ -878,7 +884,7 @@ header {
 }
 
 .player-stat-card {
-  background: var(--dark-surface);
+  /* background: var(--dark-surface); */
   border: 1px solid var(--border-color);
   padding: 20px;
   border-radius: 12px;
@@ -934,7 +940,7 @@ header {
 }
 
 .chart-card {
-  background: var(--dark-elevated);
+  /* background: var(--dark-elevated); */
   border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 20px;
@@ -958,7 +964,7 @@ header {
 
 .progress-bar {
   height: 100%;
-  background: linear-gradient(90deg, var(--success-green), #00ffaa);
+  background: linear-gradient(90deg, #32d56c, #00ffe5);
   border-radius: 32px;
   transition: width 0.6s ease;
   display: flex;
@@ -1048,7 +1054,7 @@ header {
 
 .month-bar {
   height: 100%;
-  background: linear-gradient(90deg, var(--success-green), #00ffaa);
+  background: linear-gradient(90deg, #32d56c, #00ffe5);
   border-radius: 32px;
   transition: width 0.6s ease;
 }
@@ -1084,7 +1090,7 @@ header {
 }
 
 .match-history-item {
-  background: var(--dark-elevated);
+  /* background: var(--dark-elevated); */
   border: 1px solid var(--border-color);
   border-radius: 10px;
   padding: 16px 20px;
@@ -1105,14 +1111,15 @@ header {
   font-family: 'Inter', sans-serif;
   font-size: 0.8rem;
   color: var(--text-secondary);
-  font-weight: 600;
+  font-weight: normal;
+  opacity: .4;
 }
 
 .match-history-opponent {
   font-family: 'Inter', sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: var(--text-primary);
-  font-weight: 600;
+  font-weight: normal;
 }
 
 .match-history-opponent span {
@@ -1192,6 +1199,10 @@ header {
 }
 
 @media (max-width: 768px) {
+  .player-modal-header {
+      position: static;
+    }
+    
   .player-modal-content {
     max-height: 95vh;
   }
