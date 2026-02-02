@@ -899,56 +899,56 @@ const tournamentData = {
         "time": "12:00 - 13:00",
         "player1": "ΣΕΦΕΡΗΣ",
         "player2": "ΣΙΔΕΡΗΣ Σ.",
-        "score": ""
+        "score": "(1-4) , (1-4)"
       },
       {
         "date": "2026-01-24",
         "time": "13:00 - 14:00",
         "player1": "ΣΙΔΕΡΗΣ Β.",
         "player2": "ΞΑΓΑΣ",
-        "score": ""
+        "score": "(3-4) , (4-0)tie 7-4"
       },
       {
         "date": "2026-01-24",
         "time": "14:00 - 15:00",
         "player1": "ΚΟΥΜΠΗΣ",
         "player2": "ΒΑΣΙΛΟΠΟΥΛΟΣ",
-        "score": ""
+        "score": "(1-4) , (0-4)"
       },
       {
         "date": "2026-01-24",
         "time": "15:00 - 16:00",
         "player1": "ΛΟΥΡΗ",
         "player2": "ΣΚΟΥΡΑΣ",
-        "score": ""
+        "score": "(1-4) , (4-1)tie 5-7"
       },
       {
         "date": "2026-01-31",
         "time": "11:00 - 12:00",
         "player1": "ΜΥΛΩΝΑΣ",
         "player2": "ΒΑΣΙΛΟΠΟΥΛΟΣ",
-        "score": ""
+        "score": "ΑΝΑΒΟΛΗ"
       },
       {
         "date": "2026-01-31",
         "time": "12:00 - 13:00",
         "player1": "ΛΥΜΠΕΡΤΑΣ",
         "player2": "ΓΕΡΑΣΙΜΟΠΟΥΛΟΣ",
-        "score": ""
+        "score": "(3-4) , (4-3)tie 5-7"
       },
       {
         "date": "2026-01-31",
         "time": "13:00 - 14:00",
         "player1": "ΣΕΦΕΡΗΣ",
         "player2": "ΖΑΝΗΣ",
-        "score": ""
+        "score": "(0-4) , (1-4)"
       },
       {
         "date": "2026-01-31",
         "time": "14:00 - 15:00",
         "player1": "ΜΠΑΣΤΑΣ",
         "player2": "HRISTOV",
-        "score": ""
+        "score": "(2-4) , (3-4)"
       }
     ],
     "standings": [
@@ -961,14 +961,14 @@ const tournamentData = {
       {
         "position": 2,
         "name": "ΖΑΝΗΣ",
-        "matches_played": 6,
-        "points": 11
+        "matches_played": 7,
+        "points": 13
       },
       {
         "position": 3,
         "name": "ΣΚΟΥΡΑΣ",
-        "matches_played": 5,
-        "points": 10
+        "matches_played": 6,
+        "points": 12
       },
       {
         "position": 4,
@@ -984,110 +984,110 @@ const tournamentData = {
       },
       {
         "position": 6,
+        "name": "HRISTOV",
+        "matches_played": 6,
+        "points": 10
+      },
+      {
+        "position": 7,
         "name": "ΤΖΑΒΑΡΑΣ",
         "matches_played": 6,
         "points": 9
       },
       {
-        "position": 7,
+        "position": 8,
         "name": "ΑΘΑΝΑΣΙΑΔΗΣ",
         "matches_played": 6,
         "points": 9
       },
       {
-        "position": 8,
+        "position": 9,
         "name": "ΑΝΑΓΝΩΣΤΕΛΛΗΣ",
         "matches_played": 6,
         "points": 9
       },
       {
-        "position": 9,
+        "position": 10,
+        "name": "ΜΠΑΣΤΑΣ",
+        "matches_played": 6,
+        "points": 9
+      },
+      {
+        "position": 11,
+        "name": "ΛΟΥΡΗ",
+        "matches_played": 6,
+        "points": 9
+      },
+      {
+        "position": 12,
+        "name": "ΒΑΣΙΛΟΠΟΥΛΟΣ",
+        "matches_played": 5,
+        "points": 9
+      },
+      {
+        "position": 13,
+        "name": "ΣΙΔΕΡΗΣ Β.",
+        "matches_played": 6,
+        "points": 9
+      },
+      {
+        "position": 14,
+        "name": "ΣΙΔΕΡΗΣ Σ.",
+        "matches_played": 6,
+        "points": 9
+      },
+      {
+        "position": 15,
         "name": "ΤΣΟΥΚΑΛΑΣ",
         "matches_played": 5,
         "points": 8
       },
       {
-        "position": 10,
-        "name": "ΜΠΑΣΤΑΣ",
-        "matches_played": 5,
-        "points": 8
-      },
-      {
-        "position": 11,
-        "name": "HRISTOV",
-        "matches_played": 5,
-        "points": 8
-      },
-      {
-        "position": 12,
+        "position": 16,
         "name": "ΜΑΓΙΟΠΟΥΛΟΣ",
         "matches_played": 6,
         "points": 8
       },
       {
-        "position": 13,
+        "position": 17,
         "name": "ΛΟΥΚΑΡΕΛΛΗΣ",
         "matches_played": 6,
         "points": 8
       },
       {
-        "position": 14,
-        "name": "ΛΟΥΡΗ",
-        "matches_played": 5,
-        "points": 8
-      },
-      {
-        "position": 15,
-        "name": "ΒΑΣΙΛΟΠΟΥΛΟΣ",
-        "matches_played": 4,
-        "points": 7
-      },
-      {
-        "position": 16,
-        "name": "ΣΙΔΕΡΗΣ Β.",
-        "matches_played": 5,
-        "points": 7
-      },
-      {
-        "position": 17,
-        "name": "ΚΟΥΜΠΗΣ",
-        "matches_played": 5,
-        "points": 7
-      },
-      {
         "position": 18,
-        "name": "ΣΙΔΕΡΗΣ Σ.",
-        "matches_played": 5,
-        "points": 7
+        "name": "ΚΟΥΜΠΗΣ",
+        "matches_played": 6,
+        "points": 8
       },
       {
         "position": 19,
         "name": "ΞΑΓΑΣ",
-        "matches_played": 5,
-        "points": 6
+        "matches_played": 6,
+        "points": 7
       },
       {
         "position": 20,
         "name": "ΛΥΜΠΕΡΤΑΣ",
-        "matches_played": 5,
-        "points": 6
+        "matches_played": 6,
+        "points": 7
       },
       {
         "position": 21,
-        "name": "ΜΥΛΩΝΑΣ",
-        "matches_played": 5,
-        "points": 5
+        "name": "ΓΕΡΑΣΙΜΟΠΟΥΛΟΣ",
+        "matches_played": 6,
+        "points": 7
       },
       {
         "position": 22,
-        "name": "ΓΕΡΑΣΙΜΟΠΟΥΛΟΣ",
-        "matches_played": 5,
-        "points": 5
+        "name": "ΣΕΦΕΡΗΣ",
+        "matches_played": 6,
+        "points": 7
       },
       {
         "position": 23,
-        "name": "ΣΕΦΕΡΗΣ",
-        "matches_played": 4,
+        "name": "ΜΥΛΩΝΑΣ",
+        "matches_played": 5,
         "points": 5
       },
       {
@@ -2144,17 +2144,53 @@ async function uploadToGitHub() {
 
     console.log('✅ js/main.js uploaded');
 
+    // Step 3: Update index.html with cache-busting parameter
+    progressFill.style.width = '90%';
+    progressText.textContent = 'Updating index.html with cache-busting...';
+
+    console.log('Fetching current index.html...');
+
+    // Get current index.html
+    const htmlUrl = `https://raw.githubusercontent.com/${githubConfig.username}/${githubConfig.repo}/main/index.html`;
+    const htmlResponse = await fetch(htmlUrl);
+
+    if (htmlResponse.ok) {
+      let htmlContent = await htmlResponse.text();
+
+      // Add cache-busting version parameter to main.js
+      const timestamp = Date.now();
+      const oldScriptTag = /<script src="js\/main\.js(\?v=\d+)?"><\/script>/;
+      const newScriptTag = `<script src="js/main.js?v=${timestamp}"></script>`;
+
+      const updatedHtml = htmlContent.replace(oldScriptTag, newScriptTag);
+
+      // Upload updated index.html
+      await updateGitHubFile(
+        githubConfig.username,
+        githubConfig.repo,
+        'index.html',
+        updatedHtml,
+        githubConfig.token
+      );
+
+      console.log('✅ index.html updated with cache-busting');
+    } else {
+      console.log('⚠️ Could not update index.html (not critical)');
+    }
+
     progressFill.style.width = '100%';
     progressText.textContent = 'Complete!';
 
     // Show detailed success message
-    showMessage('success', `✅ Successfully updated ${updatedMonths.join(', ')}! Both tournament_data.json and js/main.js have been updated on GitHub. All users will see the changes in 1-2 minutes.`);
+    showMessage('success', `✅ Successfully updated ${updatedMonths.join(', ')}! Files updated: tournament_data.json, js/main.js, and index.html. All users will see the changes in 1-2 minutes (may need to refresh).`);
 
     console.log('✅ Upload complete!');
     console.log('📄 Updated files:');
     console.log('  - tournament_data.json');
     console.log('  - js/main.js (with embedded data)');
+    console.log('  - index.html (cache-busting version)');
     console.log('⏳ GitHub Pages will deploy in 1-2 minutes');
+    console.log('💡 Other users may need to hard refresh (Ctrl+F5)');
     console.log('Reloading page in 4 seconds...');
 
     // Reload after 4 seconds
