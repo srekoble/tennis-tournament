@@ -2069,29 +2069,29 @@ async function uploadToGitHub() {
 
     console.log('✅ tournament_data.json uploaded');
 
-    // Step 2: Update index.html with new embedded data
+    // Step 2: Update main.js with new embedded data
     progressFill.style.width = '70%';
-    progressText.textContent = 'Updating index.html...';
+    progressText.textContent = 'Updating main.js...';
 
-    console.log('Fetching current index.html...');
+    console.log('Fetching current main.js...');
 
-    // Get current index.html
-    const htmlUrl = `https://raw.githubusercontent.com/${githubConfig.username}/${githubConfig.repo}/main/index.html`;
-    const htmlResponse = await fetch(htmlUrl);
+    // Get current main.js
+    const jsUrl = `https://raw.githubusercontent.com/${githubConfig.username}/${githubConfig.repo}/main/js/main.js`;
+    const jsResponse = await fetch(jsUrl);
 
-    if (!htmlResponse.ok) {
-      throw new Error('Could not fetch index.html. Make sure the file exists in your repo.');
+    if (!jsResponse.ok) {
+      throw new Error('Could not fetch js/main.js. Make sure the file exists in your repo.');
     }
 
-    let htmlContent = await htmlResponse.text();
-    console.log(`Fetched index.html (${htmlContent.length} bytes)`);
+    let jsContent = await jsResponse.text();
+    console.log(`Fetched main.js (${jsContent.length} bytes)`);
 
-    // Replace the embedded tournamentData in HTML
+    // Replace the embedded tournamentData in main.js
     const startMarker = 'const tournamentData = {';
-    const startIdx = htmlContent.indexOf(startMarker);
+    const startIdx = jsContent.indexOf(startMarker);
 
     if (startIdx === -1) {
-      throw new Error('Could not find tournamentData in index.html');
+      throw new Error('Could not find tournamentData in main.js');
     }
 
     // Find the end of the object by counting braces
@@ -2099,16 +2099,16 @@ async function uploadToGitHub() {
     let inData = false;
     let endIdx = null;
 
-    for (let i = startIdx + startMarker.length - 1; i < htmlContent.length; i++) {
-      if (htmlContent[i] === '{') {
+    for (let i = startIdx + startMarker.length - 1; i < jsContent.length; i++) {
+      if (jsContent[i] === '{') {
         braceCount++;
         inData = true;
-      } else if (htmlContent[i] === '}') {
+      } else if (jsContent[i] === '}') {
         braceCount--;
         if (inData && braceCount === 0) {
           // Find the semicolon
-          for (let j = i; j < Math.min(i + 20, htmlContent.length); j++) {
-            if (htmlContent[j] === ';') {
+          for (let j = i; j < Math.min(i + 20, jsContent.length); j++) {
+            if (jsContent[j] === ';') {
               endIdx = j + 1;
               break;
             }
@@ -2119,41 +2119,41 @@ async function uploadToGitHub() {
     }
 
     if (endIdx === null) {
-      throw new Error('Could not find end of tournamentData in index.html');
+      throw new Error('Could not find end of tournamentData in main.js');
     }
 
     // Create new data string with proper indentation
     const newDataStr = `const tournamentData = ${JSON.stringify(tournamentData, null, 6)};`;
 
-    // Replace in HTML
-    const updatedHtml = htmlContent.substring(0, startIdx) + newDataStr + htmlContent.substring(endIdx);
+    // Replace in JS
+    const updatedJs = jsContent.substring(0, startIdx) + newDataStr + jsContent.substring(endIdx);
 
-    console.log(`Updated HTML (${updatedHtml.length} bytes)`);
+    console.log(`Updated main.js (${updatedJs.length} bytes)`);
 
     progressFill.style.width = '85%';
-    progressText.textContent = 'Uploading index.html...';
+    progressText.textContent = 'Uploading main.js...';
 
-    // Upload updated HTML
+    // Upload updated main.js
     await updateGitHubFile(
       githubConfig.username,
       githubConfig.repo,
-      'index.html',
-      updatedHtml,
+      'js/main.js',
+      updatedJs,
       githubConfig.token
     );
 
-    console.log('✅ index.html uploaded');
+    console.log('✅ js/main.js uploaded');
 
     progressFill.style.width = '100%';
     progressText.textContent = 'Complete!';
 
     // Show detailed success message
-    showMessage('success', `✅ Successfully updated ${updatedMonths.join(', ')}! Both tournament_data.json and index.html have been updated on GitHub. All users will see the changes in 1-2 minutes.`);
+    showMessage('success', `✅ Successfully updated ${updatedMonths.join(', ')}! Both tournament_data.json and js/main.js have been updated on GitHub. All users will see the changes in 1-2 minutes.`);
 
     console.log('✅ Upload complete!');
     console.log('📄 Updated files:');
     console.log('  - tournament_data.json');
-    console.log('  - index.html (with embedded data)');
+    console.log('  - js/main.js (with embedded data)');
     console.log('⏳ GitHub Pages will deploy in 1-2 minutes');
     console.log('Reloading page in 4 seconds...');
 
