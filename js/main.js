@@ -2326,6 +2326,40 @@ function detectMonthFromFilename(filename) {
     return 'IANOΥΑΡΙΟΣ';
   }
 
+  // February - ΦΕΒΡΟΥΑΡΙΟΣ
+  if (upperName.includes('ΦΕΒΡΟΥΑΡ') ||
+    upperName.includes('FEVROUAR') ||
+    upperName.includes('FEVRO') ||
+    upperName.includes('FEBRUAR')) {
+    return 'ΦΕΒΡΟΥΑΡΙΟΣ';
+  }
+
+  // March - ΜΑΡΤΙΟΣ
+  if (upperName.includes('ΜΑΡΤ') ||
+    upperName.includes('MART') ||
+    upperName.includes('MARCH')) {
+    return 'ΜΑΡΤΙΟΣ';
+  }
+
+  // April - ΑΠΡΙΛΙΟΣ
+  if (upperName.includes('ΑΠΡΙΛ') ||
+    upperName.includes('APRIL')) {
+    return 'ΑΠΡΙΛΙΟΣ';
+  }
+
+  // May - ΜΑΪΟΣ
+  if (upperName.includes('ΜΑΪ') ||
+    upperName.includes('ΜΑΙΟΣ') ||
+    upperName.includes('MAY')) {
+    return 'ΜΑΪΟΣ';
+  }
+
+  // June - ΙΟΥΝΙΟΣ
+  if (upperName.includes('ΙΟΥΝΙ') ||
+    upperName.includes('JUNE')) {
+    return 'ΙΟΥΝΙΟΣ';
+  }
+
   return null;
 }
 
