@@ -1149,93 +1149,51 @@ const tournamentData = {
                   {
                         "date": "2025-02-14",
                         "time": "11:00 - 12:00",
-                        "player1": "ΤΣΟΥΚΑΛΑΣ",
-                        "player2": "ΛΟΥΡΗ",
-                        "score": ""
+                        "player1": "ΞΑΓΑΣ",
+                        "player2": "ΤΣΟΥΚΑΛΑΣ",
+                        "score": "(0-4) , (0-4)"
                   },
                   {
                         "date": "2025-02-14",
                         "time": "12:00 - 13:00",
                         "player1": "ΤΖΑΒΑΡΑΣ",
                         "player2": "ΑΝΑΓΝΩΣΤΕΛΛΗΣ",
-                        "score": ""
+                        "score": "(3-1) , (4-1) tie 0-7"
                   },
                   {
                         "date": "2025-02-14",
                         "time": "13:00 - 14:00",
-                        "player1": "ΑΘΑΝΑΣΙΑΔΗΣ",
-                        "player2": "ΜΑΓΙΟΠΟΥΛΟΣ",
-                        "score": ""
+                        "player1": "ΜΑΓΙΟΠΟΥΛΟΣ",
+                        "player2": "ΑΘΑΝΑΣΙΑΔΗΣ",
+                        "score": "(1-4) , (4-3) tie 7-5"
                   },
                   {
                         "date": "2025-02-14",
                         "time": "14:00 - 15:00",
-                        "player1": "ΓΕΡΑΣΙΜΟΠΟΥΛΟΣ",
-                        "player2": "ΣΙΔΕΡΗΣ Σ.",
-                        "score": ""
+                        "player1": "ΣΙΔΕΡΗΣ Σ.",
+                        "player2": "ΓΕΡΑΣΙΜΟΠΟΥΛΟΣ",
+                        "score": "(4-0) , (4-2)"
                   },
                   {
                         "date": "2025-02-21",
                         "time": "12:00 - 13:00",
                         "player1": "ΣΙΔΕΡΗΣ ΒΑΓ.",
-                        "player2": "ΣΕΦΕΡΗΣ",
-                        "score": ""
+                        "player2": "ΤΣΟΥΚΑΛΑΣ",
+                        "score": "(1-4) , (1-4)"
                   },
                   {
                         "date": "2025-02-21",
                         "time": "13:00 - 14:00",
-                        "player1": "ΤΖΩΡΤΖΗΣ",
-                        "player2": "ΞΑΓΑΣ",
-                        "score": ""
-                  },
-                  {
-                        "date": "2025-02-21",
-                        "time": "14:00 - 15:00",
-                        "player1": "ΑΝΑΓΝΩΣΤΕΛΛΗΣ",
-                        "player2": "ΖΑΝΗΣ",
-                        "score": ""
-                  },
-                  {
-                        "date": "2025-02-21",
-                        "time": "15:00 - 16:00",
-                        "player1": "ΣΙΔΕΡΗΣ ΣΑΒ.",
-                        "player2": "ΜΠΑΣΤΑΣ",
-                        "score": ""
-                  },
-                  {
-                        "date": "2025-02-28",
-                        "time": "11:00 - 12:00",
-                        "player1": "ΒΑΣΙΛΟΠΟΥΛΟΣ",
-                        "player2": "ΜΥΛΩΝΑΣ",
-                        "score": ""
-                  },
-                  {
-                        "date": "2025-02-28",
-                        "time": "12:00 - 13:00",
-                        "player1": "ΤΖΩΡΤΖΗΣ",
-                        "player2": "ΜΑΓΙΟΠΟΥΛΟΣ",
-                        "score": ""
-                  },
-                  {
-                        "date": "2025-02-28",
-                        "time": "13:00 - 14:00",
-                        "player1": "ΛΟΥΚΑΡΕΛΛΗΣ",
-                        "player2": "ΣΚΟΥΡΑΣ",
-                        "score": ""
-                  },
-                  {
-                        "date": "2025-02-28",
-                        "time": "14:00 - 15:00",
                         "player1": "ΖΑΝΗΣ",
-                        "player2": "HRISTOV",
-                        "score": ""
+                        "player2": "ΞΑΓΑΣ",
+                        "score": "(4-0) , (4-1)"
                   },
                   {
-                        "date": "2025-02-28",
-                        "time": "15:00 - 16:00",
-                        "player1": "ΓΕΡΑΣΙΜΟΠΟΥΛΟΣ",
-                        "player2": "ΚΟΥΜΠΗΣ",
-                        "score": ""
+                        "date": "2025-02-21",
+                        "time": "14:00 - 15:00",
+                        "player1": "ΣΙΔΕΡΗΣ ΣΑΒ.",
+                        "player2": "ΗRISTOV",
+                        "score": "(2-4) , (1-4)"
                   }
             ],
             "standings": [
@@ -1253,364 +1211,63 @@ const tournamentData = {
                   },
                   {
                         "position": 3,
-                        "name": "ΖΑΝΗΣ",
-                        "matches_played": 7,
-                        "points": 13
-                  },
-                  {
-                        "position": 4,
-                        "name": "ΤΑΞΙΝΤΑΡΙΔΗΣ",
-                        "matches_played": 7,
-                        "points": 12
-                  },
-                  {
-                        "position": 5,
-                        "name": "HRISTOV",
-                        "matches_played": 7,
-                        "points": 12
-                  },
-                  {
-                        "position": 6,
-                        "name": "ΛΟΥΡΗ",
-                        "matches_played": 7,
-                        "points": 11
-                  },
-                  {
-                        "position": 7,
-                        "name": "ΤΖΩΡΤΖΗΣ",
-                        "matches_played": 6,
-                        "points": 10
-                  },
-                  {
-                        "position": 8,
-                        "name": "ΜΠΑΣΤΑΣ",
-                        "matches_played": 7,
-                        "points": 10
-                  },
-                  {
-                        "position": 9,
-                        "name": "ΣΙΔΕΡΗΣ Β.",
-                        "matches_played": 7,
-                        "points": 10
-                  },
-                  {
-                        "position": 10,
-                        "name": "ΤΖΑΒΑΡΑΣ",
-                        "matches_played": 6,
-                        "points": 9
-                  },
-                  {
-                        "position": 11,
-                        "name": "ΑΘΑΝΑΣΙΑΔΗΣ",
-                        "matches_played": 6,
-                        "points": 9
-                  },
-                  {
-                        "position": 12,
-                        "name": "ΑΝΑΓΝΩΣΤΕΛΛΗΣ",
-                        "matches_played": 6,
-                        "points": 9
-                  },
-                  {
-                        "position": 13,
-                        "name": "ΒΑΣΙΛΟΠΟΥΛΟΣ",
-                        "matches_played": 5,
-                        "points": 9
-                  },
-                  {
-                        "position": 14,
-                        "name": "ΣΙΔΕΡΗΣ Σ.",
-                        "matches_played": 6,
-                        "points": 9
-                  },
-                  {
-                        "position": 15,
-                        "name": "ΤΣΟΥΚΑΛΑΣ",
-                        "matches_played": 6,
-                        "points": 9
-                  },
-                  {
-                        "position": 16,
-                        "name": "ΛΟΥΚΑΡΕΛΛΗΣ",
-                        "matches_played": 7,
-                        "points": 9
-                  },
-                  {
-                        "position": 17,
-                        "name": "ΜΑΓΙΟΠΟΥΛΟΣ",
-                        "matches_played": 6,
-                        "points": 8
-                  },
-                  {
-                        "position": 18,
-                        "name": "ΚΟΥΜΠΗΣ",
-                        "matches_played": 6,
-                        "points": 8
-                  },
-                  {
-                        "position": 19,
-                        "name": "ΞΑΓΑΣ",
-                        "matches_played": 6,
-                        "points": 7
-                  },
-                  {
-                        "position": 20,
-                        "name": "ΛΥΜΠΕΡΤΑΣ",
-                        "matches_played": 6,
-                        "points": 7
-                  },
-                  {
-                        "position": 21,
-                        "name": "ΓΕΡΑΣΙΜΟΠΟΥΛΟΣ",
-                        "matches_played": 6,
-                        "points": 7
-                  },
-                  {
-                        "position": 22,
-                        "name": "ΣΕΦΕΡΗΣ",
-                        "matches_played": 6,
-                        "points": 7
-                  },
-                  {
-                        "position": 23,
-                        "name": "ΜΥΛΩΝΑΣ",
-                        "matches_played": 5,
-                        "points": 5
-                  },
-                  {
-                        "position": 24,
-                        "name": "ΠΑΝΤΑΖΗΣ",
-                        "matches_played": 1,
-                        "points": 2
-                  },
-                  {
-                        "position": 25,
-                        "name": "ΛΙΑΚΟΠΟΥΛΟΣ",
-                        "matches_played": 1,
-                        "points": 2
-                  },
-                  {
-                        "position": 26,
-                        "name": "ΠΑΠΑΡΒΑΝΙΤΗΣ",
-                        "matches_played": 1,
-                        "points": 1
-                  },
-                  {
-                        "position": 27,
-                        "name": "ΑΡΓΥΡΟΠΟΥΛΟΣ",
-                        "matches_played": 1,
-                        "points": 1
-                  }
-            ]
-      },
-      "ΜΑΡΤΙΟΣ": {
-            "matches": [
-                  {
-                        "date": "2025-03-07",
-                        "time": "12:00 - 13:00",
-                        "player1": "ΣΙΔΕΡΗΣ Σ.",
-                        "player2": "ΤΣΟΥΚΑΛΑΣ",
-                        "score": ""
-                  },
-                  {
-                        "date": "2025-03-07",
-                        "time": "13:00 - 14:00",
-                        "player1": "ΑΘΑΝΑΣΙΑΔΗΣ",
-                        "player2": "ΓΕΡΑΣΙΜΟΠΟΥΛΟΣ",
-                        "score": ""
-                  },
-                  {
-                        "date": "2025-03-07",
-                        "time": "14:00 - 15:00",
-                        "player1": "ΤΖΩΡΤΖΗΣ",
-                        "player2": "ΣΚΟΥΡΑΣ",
-                        "score": ""
-                  },
-                  {
-                        "date": "2025-03-07",
-                        "time": "15:00 - 16:00",
-                        "player1": "ΞΑΓΑΣ",
-                        "player2": "ΛΟΥΚΑΡΕΛΛΗΣ",
-                        "score": ""
-                  },
-                  {
-                        "date": "2025-03-07",
-                        "time": "16:00 - 17:00",
-                        "player1": "ΣΙΔΕΡΗΣ Β.",
-                        "player2": "ΣΕΦΕΡΗΣ",
-                        "score": ""
-                  },
-                  {
-                        "date": "2025-03-14",
-                        "time": "11:00 - 12:00",
-                        "player1": "ΛΟΥΚΑΡΕΛΛΗΣ",
-                        "player2": "ΛΟΥΡΗ",
-                        "score": ""
-                  },
-                  {
-                        "date": "2025-03-14",
-                        "time": "12:00 - 13:00",
-                        "player1": "ΜΥΛΩΝΑΣ",
-                        "player2": "ΛΥΜΠΕΡΤΑΣ",
-                        "score": ""
-                  },
-                  {
-                        "date": "2025-03-14",
-                        "time": "13:00 - 14:00",
-                        "player1": "ΖΑΝΗΣ",
-                        "player2": "ΜΑΓΙΟΠΟΥΛΟΣ",
-                        "score": ""
-                  },
-                  {
-                        "date": "2025-03-14",
-                        "time": "14:00 - 15:00",
-                        "player1": "ΚΟΥΜΠΗΣ",
-                        "player2": "ΞΑΓΑΣ",
-                        "score": ""
-                  },
-                  {
-                        "date": "2025-03-14",
-                        "time": "15:00 - 16:00",
-                        "player1": "ΑΘΑΝΑΣΙΑΔΗΣ",
-                        "player2": "HRISTOV",
-                        "score": ""
-                  },
-                  {
-                        "date": "2025-03-21",
-                        "time": "12:00 - 13:00",
-                        "player1": "KOΥΜΠΗΣ",
-                        "player2": "ΤΣΟΥΚΑΛΑΣ",
-                        "score": ""
-                  },
-                  {
-                        "date": "2025-03-21",
-                        "time": "13:00 - 14:00",
-                        "player1": "ΑΝΑΓΝΩΣΤΕΛΛΗΣ",
-                        "player2": "ΒΑΣΙΛΟΠΟΥΛΟΣ",
-                        "score": ""
-                  },
-                  {
-                        "date": "2025-03-21",
-                        "time": "14:00 - 15:00",
-                        "player1": "ΛΟΥΡΗ",
-                        "player2": "ΣΕΦΕΡΗΣ",
-                        "score": ""
-                  },
-                  {
-                        "date": "2025-03-21",
-                        "time": "15:00 - 16:00",
-                        "player1": "ΑΙΒΑΖΟΓΛΟΥ",
-                        "player2": "ΣΚΟΥΡΑΣ",
-                        "score": ""
-                  },
-                  {
-                        "date": "2025-03-28",
-                        "time": "11:00 - 12:00",
-                        "player1": "ΤΖΩΡΤΖΗΣ",
-                        "player2": "ΖΑΝΗΣ",
-                        "score": ""
-                  },
-                  {
-                        "date": "2025-03-28",
-                        "time": "12:00 - 13:00",
-                        "player1": "ΒΑΣΙΛΟΠΟΥΛΟΣ",
-                        "player2": "ΜΥΛΩΝΑΣ",
-                        "score": ""
-                  },
-                  {
-                        "date": "2025-03-28",
-                        "time": "13:00 - 14:00",
-                        "player1": "ΑΝΑΓΝΩΣΤΕΛΛΗΣ",
-                        "player2": "ΣΙΔΕΡΗΣ Β.",
-                        "score": ""
-                  },
-                  {
-                        "date": "2025-03-28",
-                        "time": "14:00 - 15:00",
-                        "player1": "ΛΥΜΠΕΡΤΑΣ",
-                        "player2": "ΜΑΓΙΟΠΟΥΛΟΣ",
-                        "score": ""
-                  },
-                  {
-                        "date": "2025-03-28",
-                        "time": "15:00 - 16:00",
-                        "player1": "ΓΕΡΑΣΙΜΟΠΟΥΛΟΣ",
-                        "player2": "HRISTOV",
-                        "score": ""
-                  }
-            ],
-            "standings": [
-                  {
-                        "position": 1,
                         "name": "ΖΑΝΗΣ",
                         "matches_played": 8,
                         "points": 15
                   },
                   {
-                        "position": 2,
-                        "name": "ΑΙΒΑΖΟΓΛΟΥ",
-                        "matches_played": 7,
-                        "points": 14
-                  },
-                  {
-                        "position": 3,
-                        "name": "ΣΚΟΥΡΑΣ",
-                        "matches_played": 7,
-                        "points": 14
-                  },
-                  {
                         "position": 4,
-                        "name": "HRISTOV",
-                        "matches_played": 8,
-                        "points": 14
-                  },
-                  {
-                        "position": 5,
-                        "name": "ΤΣΟΥΚΑΛΑΣ",
-                        "matches_played": 8,
-                        "points": 13
-                  },
-                  {
-                        "position": 6,
                         "name": "ΤΑΞΙΝΤΑΡΙΔΗΣ",
                         "matches_played": 7,
                         "points": 12
                   },
                   {
-                        "position": 7,
-                        "name": "ΣΙΔΕΡΗΣ Σ.",
+                        "position": 5,
+                        "name": "HRISTOV",
                         "matches_played": 8,
-                        "points": 12
+                        "points": 14
                   },
                   {
-                        "position": 8,
+                        "position": 6,
                         "name": "ΛΟΥΡΗ",
                         "matches_played": 7,
                         "points": 11
                   },
                   {
-                        "position": 9,
+                        "position": 7,
                         "name": "ΑΝΑΓΝΩΣΤΕΛΛΗΣ",
                         "matches_played": 7,
                         "points": 11
                   },
                   {
-                        "position": 10,
-                        "name": "ΣΙΔΕΡΗΣ Β.",
+                        "position": 8,
+                        "name": "ΣΙΔΕΡΗΣ Σ.",
                         "matches_played": 8,
-                        "points": 11
+                        "points": 12
                   },
                   {
-                        "position": 11,
+                        "position": 9,
+                        "name": "ΤΣΟΥΚΑΛΑΣ",
+                        "matches_played": 8,
+                        "points": 13
+                  },
+                  {
+                        "position": 10,
                         "name": "ΤΖΩΡΤΖΗΣ",
                         "matches_played": 6,
                         "points": 10
                   },
                   {
-                        "position": 12,
+                        "position": 11,
                         "name": "ΜΠΑΣΤΑΣ",
                         "matches_played": 7,
                         "points": 10
+                  },
+                  {
+                        "position": 12,
+                        "name": "ΣΙΔΕΡΗΣ Β.",
+                        "matches_played": 8,
+                        "points": 11
                   },
                   {
                         "position": 13,
@@ -1644,15 +1301,15 @@ const tournamentData = {
                   },
                   {
                         "position": 18,
-                        "name": "ΞΑΓΑΣ",
-                        "matches_played": 8,
-                        "points": 9
-                  },
-                  {
-                        "position": 19,
                         "name": "ΚΟΥΜΠΗΣ",
                         "matches_played": 6,
                         "points": 8
+                  },
+                  {
+                        "position": 19,
+                        "name": "ΞΑΓΑΣ",
+                        "matches_played": 8,
+                        "points": 9
                   },
                   {
                         "position": 20,
@@ -1698,18 +1355,6 @@ const tournamentData = {
                   },
                   {
                         "position": 27,
-                        "name": "ΑΡΓΥΡΟΠΟΥΛΟΣ",
-                        "matches_played": 1,
-                        "points": 1
-                  },
-                  {
-                        "position": 29,
-                        "name": "ΠΑΠΑΡΒΑΝΙΤΗΣ",
-                        "matches_played": 1,
-                        "points": 1
-                  },
-                  {
-                        "position": 30,
                         "name": "ΑΡΓΥΡΟΠΟΥΛΟΣ",
                         "matches_played": 1,
                         "points": 1
