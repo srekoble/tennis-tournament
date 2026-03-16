@@ -1401,37 +1401,37 @@ const tournamentData = {
                   {
                         "date": "2025-03-14",
                         "time": "11:00 - 12:00",
-                        "player1": "ΣΚΟΥΡΑΣ",
-                        "player2": "HRISTOV",
-                        "score": ""
+                        "player1": "HRISTOV",
+                        "player2": "ΣΚΟΥΡΑΣ",
+                        "score": "(4-1) , (4-3)"
                   },
                   {
                         "date": "2025-03-14",
                         "time": "12:00 - 13:00",
                         "player1": "ΑΙΒΑΖΟΓΛΟΥ",
                         "player2": "ΑΘΑΝΑΣΙΑΔΗΣ",
-                        "score": ""
+                        "score": "(4-2) , (2-4) Τie 7-5"
                   },
                   {
                         "date": "2025-03-14",
                         "time": "13:00 - 14:00",
                         "player1": "ΜΠΑΣΤΑΣ",
                         "player2": "ΤΣΟΥΚΑΛΑΣ",
-                        "score": ""
+                        "score": "(1-4) , (3-4)"
                   },
                   {
                         "date": "2025-03-14",
                         "time": "14:00 - 15:00",
                         "player1": "ΤΖΩΡΤΖΗΣ",
                         "player2": "ΜΑΓΙΟΠΟΥΛΟΣ",
-                        "score": ""
+                        "score": "(4-2) , (2-4)  Τie 5-7"
                   },
                   {
                         "date": "2025-03-14",
                         "time": "15:00 - 16:00",
                         "player1": "ΚΟΥΜΠΗΣ",
                         "player2": "ΓΕΡΑΣΙΜΟΠΟΥΛΟΣ",
-                        "score": ""
+                        "score": "(4-2) , (4-0)"
                   },
                   {
                         "date": "2025-03-21",
@@ -1508,32 +1508,32 @@ const tournamentData = {
                   {
                         "position": 1,
                         "name": "ΣΚΟΥΡΑΣ",
+                        "matches_played": 9,
+                        "points": 17
+                  },
+                  {
+                        "position": 2,
+                        "name": "ΑΙΒΑΖΟΓΛΟΥ",
                         "matches_played": 8,
                         "points": 16
                   },
                   {
-                        "position": 2,
+                        "position": 3,
+                        "name": "HRISTOV",
+                        "matches_played": 9,
+                        "points": 16
+                  },
+                  {
+                        "position": 4,
                         "name": "ΖΑΝΗΣ",
                         "matches_played": 8,
                         "points": 15
                   },
                   {
-                        "position": 3,
-                        "name": "ΑΙΒΑΖΟΓΛΟΥ",
-                        "matches_played": 7,
-                        "points": 14
-                  },
-                  {
-                        "position": 4,
-                        "name": "HRISTOV",
-                        "matches_played": 8,
-                        "points": 14
-                  },
-                  {
                         "position": 5,
                         "name": "ΤΣΟΥΚΑΛΑΣ",
-                        "matches_played": 8,
-                        "points": 13
+                        "matches_played": 9,
+                        "points": 15
                   },
                   {
                         "position": 6,
@@ -1549,81 +1549,81 @@ const tournamentData = {
                   },
                   {
                         "position": 8,
+                        "name": "ΑΘΑΝΑΣΙΑΔΗΣ",
+                        "matches_played": 9,
+                        "points": 13
+                  },
+                  {
+                        "position": 9,
                         "name": "ΤΑΞΙΝΤΑΡΙΔΗΣ",
                         "matches_played": 7,
                         "points": 12
                   },
                   {
-                        "position": 9,
-                        "name": "ΑΘΑΝΑΣΙΑΔΗΣ",
+                        "position": 10,
+                        "name": "ΤΖΩΡΤΖΗΣ",
                         "matches_played": 8,
                         "points": 12
                   },
                   {
-                        "position": 10,
+                        "position": 11,
+                        "name": "ΜΠΑΣΤΑΣ",
+                        "matches_played": 9,
+                        "points": 12
+                  },
+                  {
+                        "position": 12,
+                        "name": "ΜΑΓΙΟΠΟΥΛΟΣ",
+                        "matches_played": 8,
+                        "points": 12
+                  },
+                  {
+                        "position": 13,
                         "name": "ΛΟΥΡΗ",
                         "matches_played": 7,
                         "points": 11
                   },
                   {
-                        "position": 11,
+                        "position": 14,
                         "name": "ΑΝΑΓΝΩΣΤΕΛΛΗΣ",
                         "matches_played": 7,
                         "points": 11
                   },
                   {
-                        "position": 12,
-                        "name": "ΤΖΩΡΤΖΗΣ",
-                        "matches_played": 7,
-                        "points": 11
-                  },
-                  {
-                        "position": 13,
-                        "name": "ΜΠΑΣΤΑΣ",
-                        "matches_played": 8,
-                        "points": 11
-                  },
-                  {
-                        "position": 14,
+                        "position": 15,
                         "name": "ΛΟΥΚΑΡΕΛΛΗΣ",
                         "matches_played": 8,
                         "points": 11
                   },
                   {
-                        "position": 15,
+                        "position": 16,
+                        "name": "ΓΕΡΑΣΙΜΟΠΟΥΛΟΣ",
+                        "matches_played": 9,
+                        "points": 11
+                  },
+                  {
+                        "position": 17,
                         "name": "ΤΖΑΒΑΡΑΣ",
                         "matches_played": 7,
                         "points": 10
                   },
                   {
-                        "position": 16,
-                        "name": "ΜΑΓΙΟΠΟΥΛΟΣ",
-                        "matches_played": 7,
-                        "points": 10
-                  },
-                  {
-                        "position": 17,
+                        "position": 18,
                         "name": "ΞΑΓΑΣ",
                         "matches_played": 9,
                         "points": 10
                   },
                   {
-                        "position": 18,
-                        "name": "ΓΕΡΑΣΙΜΟΠΟΥΛΟΣ",
-                        "matches_played": 8,
+                        "position": 19,
+                        "name": "ΚΟΥΜΠΗΣ",
+                        "matches_played": 7,
                         "points": 10
                   },
                   {
-                        "position": 19,
+                        "position": 20,
                         "name": "ΒΑΣΙΛΟΠΟΥΛΟΣ",
                         "matches_played": 5,
                         "points": 9
-                  },
-                  {
-                        "position": 20,
-                        "name": "ΚΟΥΜΠΗΣ",
-                        "matches_played": 6,
-                        "points": 8
                   },
                   {
                         "position": 21,
